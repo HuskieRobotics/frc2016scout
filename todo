@@ -1,0 +1,63 @@
+TeleOp 
+# of stacks knocked down (plus and minus button with a counter)
+stacks knocked down
+Fouls (how do we want to do this?) (text box with foul points?)
+What things can they manipulate (bin tote and noodles listed out with checkbox)
+Recycle Bins
+Totes
+Noodles
+Max # of crates stacked (plus and minus button with number displayed )
+max number of crates stacked
+Coopertition information (coopertition stack and coopertition set checkboxes)
+coopertition stack
+coopertition set
+Go over scoring platform (check box for if it can)
+goes over scoring platform
+Where do they collect totes from (gathers from ground checkbox and from human player check box)
+ground
+human
+Preferred place of  tote collection (gathers from center radiobutton and from human player radiobutton)
+center
+human
+Pick up recycling bin (check box if it can)
+already done under manipulate bin further up in the doc.
+Tip bins? (checkbox if the robot knocks over any recycle bins)
+tips over any recycle bins
+
+Auto
+Starting configuration (1,2,3 zone radiobutton)
+1
+2
+3
+
+Move things into auto zone (type, #) (check box for type corresponding textbox for #)
+Robot ends in auto zone? (check box if yes)
+does the robot end in the auto zone?
+Stack of bins? (if 3 yellow bins stacked check box if yes)
+stack three yellow bins?
+Do they get bins from center  (check box if yes)
+get bins from center?
+
+Not in other categories
+OPR! OPR! OPR! 
+
+Pit Scouting
+teams of two 
+height (two text boxes. one for feet one for inches)
+height: feet
+inches
+Picture (yasha do this idk how to)
+Drivetrain (list numerous different types of drivetrains with radio button)
+we need to ask andrew which the different types of drive trains will be
+where do they store totes (in/out) (radiobutton for in and out)
+Where do they start (1,2,3 zone radiobutton)
+Teams programming language (list all the types they may use with radio buttons)
+
+
+
+Fouls 
+
+Teach people fouls and give text box
+Ask field crew to announce fouls & teams
+Fouls that we care about 
+Alliance foul average 
