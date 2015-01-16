@@ -3,12 +3,62 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+	<form>
+	<h2> Teleop </h2>
+	Fouls: <input type="text">
 
-  {{> hello}}
+	<h3> Things that can be manipulated: </h3>
+	<input type="checkbox" name="materials" value="recyling bins"> Recyling  <br>
+	<input type="checkbox" name="materials" value="totes"> Totes<br>
+	<input type="checkbox" name="materials" value="noodles"> Noodles<br>
+
+	<h3> Coopertition Information </h3>
+	<input type="checkbox" name="coopertition" value="stack"> Coopertition Stack<br>	
+	<input type="checkbox" name="coopertition" value="set"> Cooperition Set <br>
+
+	<h3> Where do they collect totes from </h3>
+	<input type="checkbox" name="totes" value="ground"> From ground<br>
+	<input type="checkbox" name="totes" value="human"> From human player<br>
+
+	<h3> Preference of tote collection </h3>
+	<input type="radio" name="totes" value="ground"> From ground<br>
+	<input type="radio" name="totes" value="human"> From human player<br>
+
+	<h3> Tip any totes or bins </h3>
+	<input type="radio" name="pickup" value="yes"> YES 
+	<input type="radio" name="pickup" value="no"> NO <br>
+
+	<h3> # of stacks knocked down </h3>
+	<input type="button" name="text" value="increase"> 
+	<input type="button" name="text" value="decrease"> <input type="text"><br>
+
+	<h3> Max crates </h3>
+	<input type="button" name="text" value="increase"> 
+	<input type="button" name="text" value="decrease"> <input type="text">
+
+	<h3> Go over platform </h3>
+	<input type="radio" name="over" value="yes"> YES 
+	<input type="radio" name="over" value="no"> NO <br>
+
+	<h2> Auto </h2>
+
+	<h3>Starting configuration</h3> 
+	<input type = "radio" name = "config" value = "1"> 1 <br>
+	<input type = "radio" name = "config" value = "2"> 2 <br>
+	<input type = "radio" name = "config" value = "3"> 3 <br>
+
+	<h3>Materials in Auto Zone</h3>
+	Recycling Bins: <input type = "text">
+	Totes: <input type = "text">
+	Noodles: <input type = "text">
+
+	<h3>Move things into Auto Zone</h3>
+	<input type="checkbox" name="Robot ends in auto zone" value="not">
+
+
+
+
+
+
+	</form>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
