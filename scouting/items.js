@@ -1,10 +1,28 @@
-Items = new Meteor.Collection('items');
+tele = new Meteor.Collection('tele');
+auto = new Meteor.Collection('auto');
+pit = new Meteor.Collection('pit');
 if (Meteor.isClient) {
 	Template.add_item.events({
 		'click .submit': function() {
-			Items.insert({
-				item: $('.the_item').val()
+			tele.insert({
+				 manipulateRecycleBin: $('.recycling bins').val(),
+				 manipulateTotes: $('.totes').val(),
+				 manipulateNoodles: $('.noodles').val(),
+				 coopertitionPoints: $('.coopertition').val(),
+				 collectGround: $('.ground').val(),
+				 collectHuman: $('.human').val(),
+				 collectPreference: $('.totePreference').val(),
+				 tipTote: $('.tipObjects').val(),
+				 stacksKnocked: $('.stacksKnockedDown').val(),
+				 maxCrates: $('.maxCrates').val(),
+				 overPlatform: $('.goOverPlatform').val()
+
+
 			})
 		}
+
 	});
+	Template.auto.events({
+		'click.submit':
+	})
 }
