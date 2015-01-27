@@ -23,6 +23,16 @@ if (Meteor.isClient) {
 
 	});
 	Template.auto.events({
-		'click.submit':
+		'click.submit': function() {
+			auto.insert({
+				startingConfiguration: $('.startingConfig')
+				binsAuto: $('.binsAuto')
+				totesAuto: $('.totesAuto')
+				noodlesAuto: $('.noodlesAuto')
+				yellowBinStack: $('.stackedYellowBins')
+				endAuto: $('.endAutoZone')
+
+			})
+		}
 	})
 }
