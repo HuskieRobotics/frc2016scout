@@ -3,70 +3,19 @@
 </head>
 
 <body>
-	<form>
-	<h2> Teleop </h2>
-	Fouls: <input type="text">
-
-
-	<h3> Things that can be manipulated: </h3>
-	<input type="checkbox" name="materials" value="recyling bins" class="recyling bins"> Recyling  <br>
-	<input type="checkbox" name="materials" value="totes" class="totes"> Totes<br>
-	<input type="checkbox" name="materials" value="noodles" class="noodles"> Noodles<br>
-
-	<h3> Coopertition Information </h3>
-	<input type="radio" name="coopertition" value="none" class="coopertition"> none (0)<br>
-	<input type="radio" name="coopertition" value="set" class="coopertition"> Cooperition Set (20)<br>
-	<input type="radio" name="coopertition" value="stack" class="coopertition"> Coopertition Stack (40)<br>
-
-	<h3> Where do they collect totes from </h3>
-	<input type="checkbox" name="totes" value="ground" class="ground"> From ground<br>
-	<input type="checkbox" name="totes" value="human" class="human"> From human player<br>
-
-	<h3> Preference of tote collection </h3>
-	<input type="radio" name="totes" value="ground" class="totePreference"> From ground<br>
-	<input type="radio" name="totes" value="human" class="totePreference"> From human player<br>
-
-	<h3> Tip any totes or bins </h3>
-	<input type="radio" name="pickup" value="yes" class="tipObjects"> YES 
-	<input type="radio" name="pickup" value="no" class="tipObjects"> NO <br>
-
-	<h3> # of stacks knocked down </h3>
-	<input type="number" class="stacksKnockedDown"><br>
-
-	<h3> Max crates </h3>
-	<input type="number" class="maxCrates">
-
-	<h3> Go over platform </h3>
-	<input type="radio" name="over" value="yes" class="goOverPlatform"> YES 
-	<input type="radio" name="over" value="no" class="goOverPlatform"> NO <br>
-
-	<h2> Auto </h2>
-
-	<h3>Starting configuration</h3> 
-	<input type = "radio" name = "config" value = "1" class="startingConfig"> 1 <br>
-	<input type = "radio" name = "config" value = "2" class="startingConfig"> 2 <br>
-	<input type = "radio" name = "config" value = "3" class="startingConfig"> 3 <br>
-
-	<h3>Materials in Auto Zone</h3>
-	Recycling Bins: <input type = "text" class="binsAuto">
-	Totes: <input type = "text" class="totesAuto">
-	Noodles: <input type = "text" class="noodlesAuto">
-
-	<h3>Stacking yellow bins</h3>
-	<input type="radio" name = "bins" value="yes" class="stackedYellowBins"> YES 
-	<input type="radio" name = "bins" value="no" class="stackedYellowBins"> NO<br> 
-
-	<h3>Robot ends in auto zone</h3>
-	<input type="radio" name="auto" value="yes" class="endAutoZone"> YES
-	<input type="radio" name="auto" value="no" class="endAutoZone"> NO
-
-
-	<h3>Pit Scouting</h3>
-
-
-
-
-
-
-	</form>
+	{{> form}}
+	{{> get_data}}
 </body>
+
+<template name="form">
+	<form>
+		<input type="text" id="input">
+		<button class="submit">Submit</button>
+	</form>
+</template>
+
+<template name="get_data">
+	<form>
+		<button>Get Data</button>
+	</form>
+</template>
