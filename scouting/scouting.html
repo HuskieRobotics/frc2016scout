@@ -6,6 +6,7 @@
 	
 	{{> match}}
 	{{> get_data}}
+	{{> submit_form}}
 </body>
 
 <template name="form">
@@ -39,10 +40,10 @@
 		<input type="radio" name="pickup" value="no" id = "tipTotes"> NO <br>
 
 		<h3> # of stacks knocked down </h3>
-		<input type="number" name = "stacksKnocked" id = "stacksKnocked"><br>
+		<input type="text" name = "stacksKnocked" id = "stacksKnocked"><br>
 
 		<h3> Max crates </h3>
-		<input type="number" name = "maxCrates" id = "maxCrates">
+		<input type="text" name = "maxCrates" id = "maxCrates">
 
 		<h3> Go over platform </h3>
 		<input type="radio" name="platform" value="yes" id = "overPlatform"> YES 
@@ -75,5 +76,10 @@
 <template name="get_data">
 	<form>
 		<button>Get Data</button>
+	</form>
+</template>
+<template name="submit_form">
+	<form>
+		<button>Submit</button>
 	</form>
 </template>
