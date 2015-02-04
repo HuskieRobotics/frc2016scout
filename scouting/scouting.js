@@ -3,19 +3,16 @@ data = new Mongo.Collection("data");
 if (Meteor.isClient) {
   Template.get_data.events({
     'click button': function() {
-      
-      //alert(JSON.stringify(data.find().fetch()))
       alert(JSON.stringify(data.find({})));
     }
   });
 
   Template.clear_data.events({
-    'click button': function()
-    {
+    'click .clear': function() {
+      data.remove({});
       alert("I'm clearing the data");
     }
   });
-
 
   // Template.submit_data.events({
   //   'click button': function() {
@@ -73,6 +70,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+    // data.remove({});
   });
 }
 
