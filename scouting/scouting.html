@@ -6,17 +6,11 @@
 	
 	{{> match}}
 	{{> get_data}}
-	{{> submit_data}}
+<!-- 	{{> submit_data}} -->
 	{{> clear_data}}
 	
 </body>
 
-<template name="form">
-	<form>
-		<input type="text" id="input">
-		<button class="submit">Submit</button>
-	</form>
-</template>
 
 <template name="match">
 	<form>
@@ -75,7 +69,7 @@
 		<input type="radio" name="platform" value="no" id = "overPlatform"> NO <br>
 
 		
-		<!-- <button>Submit</button> -->
+		<button id="abutton" class="submit">Submit</button>
 		
 	</form>
 </template>
@@ -94,8 +88,8 @@
 
 </template>
 
-<template name="submit_data">
+<!-- <template name="submit_data">
 	<form>
 		<button class="submit">Submit</button>
 	</form>
-</template>
+</template> -->
