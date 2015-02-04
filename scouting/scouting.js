@@ -49,23 +49,23 @@ if (Meteor.isClient) {
       var stackedYellowBins = document.getElementById("stack").value;
       alert("is it working");
       data.insert({
-          'startingPosition':startingPos,
-          'recycling bin in auto zone':rBinInZone,
-          'totes in auto zone':totesInZone,
-          'noodles in auto zone':noodlesInZone,
-          'Stacked Yellow Bins':stackedYellowBins,
-          'Ends In Auto Zone':endInAutoZone,
+          'starting_position':startingPos,
+          'recycling_bin_in_auto_zone':rBinInZone,
+          'totes_in_auto_zone':totesInZone,
+          'noodles_in_auto_zone':noodlesInZone,
+          'stacked_yellow_bins':stackedYellowBins,
+          'ends_in_auto_zone':endInAutoZone,
           'recycling':rBin,
           'totes':totes,
           'noodles':noodles,
-          'coopertitionOption':coopMode,
-          'fromArena':cGround,
-          'fromPlayer':cHuman,
-          'collectPreference':colPref,
-          'tipTotes':tip,
-          'stacksKnocked':sKnocked,
-          'maxCrates':mCrates,
-          'overPlatform':platform
+          'coopertition_option':coopMode,
+          'from_arena':cGround,
+          'from_player':cHuman,
+          'collect_preference':colPref,
+          'tip_totes':tip,
+          'stacks_knocked':sKnocked,
+          'max_crates':mCrates,
+          'over_platform':platform
       });
     }
   });
