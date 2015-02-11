@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  form(id='main_form')
+    h2  Auto 
+    h3 Starting configuration
+    input#config(type='radio', name='config', value='1')
+    br
+    input#config(type='radio', name='config', value='2')
+    br
+    input#config(type='radio', name='config', value='3')
+    br
+    h3 Materials in Auto Zone
+    input#bins(type='text', name='bins_auto')
+    input#totes(type='text', name='totes_auto')
+    input#noodles(type='text', name='noodles_auto')
+    h3 Stacking yellow bins
+    input#stack(type='radio', name='bins', value='yes')
+    input#stack(type='radio', name='bins', value='no')
+    br
+    h3 Robot ends in auto zone
+    input#autoZone(type='radio', name='auto', value='yes')
+    input#autoZone(type='radio', name='auto', value='no')
+    br
+    h2  teleop
+    h3  Things that can be manipulated: 
+    input#recycling(type='checkbox', name='recylingBins', value='recyling bins')
+    br
+    input#totes(type='checkbox', name='totes', value='totes')
+    br
+    input#noodles(type='checkbox', name='noodles', value='noodles')
+    br
+    h3  Coopertition Information 
+    input#coopertitionOption(type='radio', name='coop', value='stack')
+    br
+    input#coopOption(type='radio', name='coop', value='set')
+    br
+    h3  Where do they collect totes from 
+    input#fromArena(type='checkbox', name='cGround', value='ground')
+    br
+    input#fromPlayer(type='checkbox', name='cHuman', value='human')
+    br
+    h3  Preference of tote collection 
+    input#collectPreference(type='radio', name='collect', value='ground')
+    br
+    input#collectPreference(type='radio', name='collect', value='human')
+    br
+    h3  Tip any totes or bins 
+    input#tipTotes(type='radio', name='pickup', value='yes')
+    input#tipTotes(type='radio', name='pickup', value='no')
+    br
+    h3  # of stacks knocked down 
+    input#stacksKnocked(type='text', name='stacksKnocked')
+    br
+    h3  Max crates 
+    input#maxCrates(type='text', name='maxCrates')
+    h3  Go over platform 
+    input#overPlatform(type='radio', name='platform', value='yes')
+    input#overPlatform(type='radio', name='platform', value='no')
+    br
+    br
+    br
+    button#submit_button.submit Submit
+  form
+    button Get Data
+  form
+    button.clear clear
