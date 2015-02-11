@@ -1,6 +1,47 @@
 var express = require('express');
 var router = express.Router();
 
+var mysql = require('mysql');
+var sql = require('sql');
+
+var table = sql.define({
+  name: 'table',
+  columns: [
+  'config',
+  'bins_auto',
+  'totes_auto',
+  'noodles_auto',
+  'bins',
+  'auto',
+  'recylingBings',
+  'totes',
+  'noodles',
+  'coop',
+  'cGround',
+  'cHuman',
+  'collect',
+  'pickup',
+  'stacksKnocked',
+  'maxCrates',
+  'platform'
+  ]
+});
+
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : ''
+});
+
+connection.connect();
+
+// connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+//   if (err) throw err;
+
+//   console.log('The solution is: ', rows[0].solution);
+// });
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Scouting' });
@@ -9,6 +50,11 @@ router.get('/', function(req, res, next) {
 router.post('/save', function(req, res, next) {
 	console.log('hey');
 	console.log(req.body);
+	connection.query('', function(err, rows, fields) {
+		console.log("oh");
+	});
 });
+
+connection.end();
 
 module.exports = router;
