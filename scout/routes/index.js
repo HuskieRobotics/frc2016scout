@@ -33,7 +33,7 @@ var connection = mysql.createConnection({
   password : ''
 });
 
-connection.connect();
+// connection.connect();
 
 // connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 //   if (err) throw err;
@@ -50,11 +50,11 @@ router.get('/', function(req, res, next) {
 router.post('/save', function(req, res, next) {
 	console.log('hey');
 	console.log(req.body);
-	connection.query('', function(err, rows, fields) {
-		console.log("oh");
-	});
+	// connection.query('', function(err, rows, fields) {
+	// 	console.log("oh");
+	// });
 });
 
-connection.end();
+// connection.end();
 
 module.exports = router;
