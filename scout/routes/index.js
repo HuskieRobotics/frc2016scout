@@ -4,6 +4,25 @@ var router = express.Router();
 var mysql = require('mysql');
 var sql = require('sql');
 
+var columns = ['config',
+  'bins_auto',
+  'totes_auto',
+  'noodles_auto',
+  'bins',
+  'auto',
+  'recylingBings',
+  'totes',
+  'noodles',
+  'coop',
+  'cGround',
+  'cHuman',
+  'collect',
+  'pickup',
+  'stacksKnocked',
+  'maxCrates',
+  'platform'
+  ];
+
 var table = sql.define({
   name: 'table',
   columns: [
@@ -33,7 +52,20 @@ var connection = mysql.createConnection({
   password : ''
 });
 
-// connection.connect();
+connection.connect();
+
+var createTable = 'CREATE TABLE $match( ';
+
+columns.forEach(function(e){
+  createTable += e + ' TEXT NOT NULL';
+});
+
+createTable += ');';
+
+connection.query(createTable, function(err, rows, fields){
+  if (err) throw err;
+});
+
 
 // connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 //   if (err) throw err;
