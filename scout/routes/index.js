@@ -3,6 +3,7 @@ var router = express.Router();
 
 var mysql = require('mysql');
 var sql = require('sql');
+var jsonSql = require('json-sql')();
 
 var columns = ['config',
   'bins_auto',
