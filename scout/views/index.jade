@@ -14,16 +14,16 @@ block content
     input#config(type='radio', name='config', value='3')
     br
     h3 Materials in Auto Zone
-    input#bins(type='text', name='bins_auto')
-    input#totes(type='text', name='totes_auto')
-    input#noodles(type='text', name='noodles_auto')
+    input#bins(type='text', name='bins_auto', value='0')
+    input#totes(type='text', name='totes_auto', value='0')
+    input#noodles(type='text', name='noodles_auto', value='0')
     h3 Stacking yellow bins
     input#stack(type='radio', name='bins', value='yes')
-    input#stack(type='radio', name='bins', value='no')
+    input#stack(type='radio', name='bins', value='no', checked)
     br
     h3 Robot ends in auto zone
     input#autoZone(type='radio', name='auto', value='yes')
-    input#autoZone(type='radio', name='auto', value='no')
+    input#autoZone(type='radio', name='auto', value='no', checked)
     br
     h2  teleop
     h3  Things that can be manipulated: 
@@ -38,6 +38,7 @@ block content
     br
     input#coopOption(type='radio', name='coop', value='set')
     br
+    input#coopOption(type='radio', name='coop', value='none', checked)
     h3  Where do they collect totes from 
     input#fromArena(type='checkbox', name='cGround', value='ground')
     br
@@ -48,22 +49,23 @@ block content
     br
     input#collectPreference(type='radio', name='collect', value='human')
     br
+    input#collectPreference(type='radio', name='collect', value='none', checked)
     h3  Tip any totes or bins 
     input#tipTotes(type='radio', name='pickup', value='yes')
-    input#tipTotes(type='radio', name='pickup', value='no')
+    input#tipTotes(type='radio', name='pickup', value='no', checked)
     br
     h3  # of stacks knocked down 
-    input#stacksKnocked(type='text', name='stacksKnocked')
+    input#stacksKnocked(type='text', name='stacksKnocked', value='0')
     br
     h3  Max crates 
-    input#maxCrates(type='text', name='maxCrates')
+    input#maxCrates(type='text', name='maxCrates', value='0')
     h3  Go over platform 
     input#overPlatform(type='radio', name='platform', value='yes')
-    input#overPlatform(type='radio', name='platform', value='no')
+    input#overPlatform(type='radio', name='platform', value='no', checked)
     br
     br
     br
-    button#submit_button.submit Submit
+    button#submit_button Submit
   form
     button Get Data
   form
