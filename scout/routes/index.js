@@ -2,14 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var mysql = require('mysql');
-// // var sql = require('sql');
-var jsonSql = require('json-sql')();
 
-// // loads bauer-sql module
-var sql = require("bauer-sql");
-
-// builds data statements
-var insert = sql.insert();
 
 // var columns = ['config',
 //   'bins_auto',
