@@ -1,72 +1,136 @@
-extends layout
+doctype html
+html(lang="en")
+head
+    meta(charset="utf-8")
+    title Bootstrap, from Twitter
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="")
+    meta(name="author", content="")
 
-block content
-  h1= title
-  p Welcome to #{title}
+    //- Le styles
+    link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+    style(type="text/css")
+        body { padding-top: 60px; padding-bottom: 40px; }
+
+    //- Le HTML5 shim, for IE6-8 support of HTML5 elements
+    // if lt IE 9
+        script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
+   
+body
+    div.navbar.navbar-fixed-top
+        div.navbar-inner
+            div.container-fluid
+                a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href="#") Project name
+                div.nav-collapse
+                    ul.nav
+                        li.active
+                            a(href="#") Home
+                        li
+                            a(href="#about") About
+                        li
+                            a(href="#contact") Contact
+                    p.navbar-text.pull-right Logged in as 
+                        a(href="#") username
+
+    div.container
+        //- Main hero unit for a primary marketing message or call to action
+        div.hero-unit
+            h1 Hello, world!
+            p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+            p
+                a.btn.btn-primary.btn-large Learn more &raquo;
+
+        //- Example row of columns
+        div.row
+            div.span4
+                h2 Heading
+                p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                p
+                    a.btn(href="#") View details &raquo;
+            div.span4
+                h2 Heading
+                p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                p
+                    a.btn(href="#") View details &raquo;
+            div.span4
+                h2 Heading
+                p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                p
+                    a.btn(href="#") View details &raquo;
+        hr
+        footer
+            p &copy; Company 2012
+
+  //- h1= title
+  //- p Welcome to #{title}
   
-  form(id='main_form')
-    h2  Auto 
-    h3 Starting configuration
-    input#config(type='radio', name='config', value='1')
-    br
-    input#config(type='radio', name='config', value='2')
-    br
-    input#config(type='radio', name='config', value='3')
-    br
-    h3 Materials in Auto Zone
-    input#bins(type='text', name='bins_auto', value='0')
-    input#totes(type='text', name='totes_auto', value='0')
-    input#noodles(type='text', name='noodles_auto', value='0')
-    h3 Stacking yellow bins
-    input#stack(type='radio', name='bins', value='yes')
-    input#stack(type='radio', name='bins', value='no', checked)
-    br
-    h3 Robot ends in auto zone
-    input#autoZone(type='radio', name='auto', value='yes')
-    input#autoZone(type='radio', name='auto', value='no', checked)
-    br
-    h2  teleop
-    h3  Things that can be manipulated: 
-    input#recycling(type='checkbox', name='recylingBins', value='recyling bins')
-    br
-    input#totes(type='checkbox', name='totes', value='totes')
-    br
-    input#noodles(type='checkbox', name='noodles', value='noodles')
-    br
-    h3  Coopertition Information 
-    input#coopertitionOption(type='radio', name='coop', value='stack')
-    br
-    input#coopOption(type='radio', name='coop', value='set')
-    br
-    input#coopOption(type='radio', name='coop', value='none', checked)
-    h3  Where do they collect totes from 
-    input#fromArena(type='checkbox', name='cGround', value='ground')
-    br
-    input#fromPlayer(type='checkbox', name='cHuman', value='human')
-    br
-    h3  Preference of tote collection 
-    input#collectPreference(type='radio', name='collect', value='ground')
-    br
-    input#collectPreference(type='radio', name='collect', value='human')
-    br
-    input#collectPreference(type='radio', name='collect', value='none', checked)
-    h3  Tip any totes or bins 
-    input#tipTotes(type='radio', name='pickup', value='yes')
-    input#tipTotes(type='radio', name='pickup', value='no', checked)
-    br
-    h3  # of stacks knocked down 
-    input#stacksKnocked(type='text', name='stacksKnocked', value='0')
-    br
-    h3  Max crates 
-    input#maxCrates(type='text', name='maxCrates', value='0')
-    h3  Go over platform 
-    input#overPlatform(type='radio', name='platform', value='yes')
-    input#overPlatform(type='radio', name='platform', value='no', checked)
-    br
-    br
-    br
-    button#submit_button Submit
-  form
-    button Get Data
-  form
-    button.clear clear
+  //- form(id='main_form')
+  //-   h2  Auto 
+  //-   h3 Starting configuration
+  //-   input#config(type='radio', name='config', value='1')
+  //-   br
+  //-   input#config(type='radio', name='config', value='2')
+  //-   br
+  //-   input#config(type='radio', name='config', value='3')
+  //-   br
+  //-   h3 Materials in Auto Zone
+  //-   input#bins(type='text', name='bins_auto', value='0')
+  //-   input#totes(type='text', name='totes_auto', value='0')
+  //-   input#noodles(type='text', name='noodles_auto', value='0')
+  //-   h3 Stacking yellow bins
+  //-   input#stack(type='radio', name='bins', value='yes')
+  //-   input#stack(type='radio', name='bins', value='no', checked)
+  //-   br
+  //-   h3 Robot ends in auto zone
+  //-   input#autoZone(type='radio', name='auto', value='yes')
+  //-   input#autoZone(type='radio', name='auto', value='no', checked)
+  //-   br
+  //-   h2  teleop
+  //-   h3  Things that can be manipulated: 
+  //-   input#recycling(type='checkbox', name='recylingBins', value='recyling bins')
+  //-   br
+  //-   input#totes(type='checkbox', name='totes', value='totes')
+  //-   br
+  //-   input#noodles(type='checkbox', name='noodles', value='noodles')
+  //-   br
+  //-   h3  Coopertition Information 
+  //-   input#coopertitionOption(type='radio', name='coop', value='stack')
+  //-   br
+  //-   input#coopOption(type='radio', name='coop', value='set')
+  //-   br
+  //-   input#coopOption(type='radio', name='coop', value='none', checked)
+  //-   h3  Where do they collect totes from 
+  //-   input#fromArena(type='checkbox', name='cGround', value='ground')
+  //-   br
+  //-   input#fromPlayer(type='checkbox', name='cHuman', value='human')
+  //-   br
+  //-   h3  Preference of tote collection 
+  //-   input#collectPreference(type='radio', name='collect', value='ground')
+  //-   br
+  //-   input#collectPreference(type='radio', name='collect', value='human')
+  //-   br
+  //-   input#collectPreference(type='radio', name='collect', value='none', checked)
+  //-   h3  Tip any totes or bins 
+  //-   input#tipTotes(type='radio', name='pickup', value='yes')
+  //-   input#tipTotes(type='radio', name='pickup', value='no', checked)
+  //-   br
+  //-   h3  # of stacks knocked down 
+  //-   input#stacksKnocked(type='text', name='stacksKnocked', value='0')
+  //-   br
+  //-   h3  Max crates 
+  //-   input#maxCrates(type='text', name='maxCrates', value='0')
+  //-   h3  Go over platform 
+  //-   input#overPlatform(type='radio', name='platform', value='yes')
+  //-   input#overPlatform(type='radio', name='platform', value='no', checked)
+  //-   br
+  //-   br
+  //-   br
+  //-   button#submit_button Submit
+  //- form
+  //-   button Get Data
+  //- form
+  //-   button.clear clear
