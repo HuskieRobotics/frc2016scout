@@ -1,72 +1,145 @@
-extends layout
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Fixed Top Navbar Example for Bootstrap
+    // Bootstrap core CSS
+    link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    // Fixed navbar
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Project name
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#') Home
+            li
+              a(href='#about') About
+            li
+              a(href='#contact') Contact
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Dropdown 
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider
+                li.dropdown-header Nav header
+                li
+                  a(href='#') Separated link
+                li
+                  a(href='#') One more separated link
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='../navbar/') Default
+            li
+              a(href='../navbar-static-top/') Static top
+            li.active
+              a(href='./') Fixed top
+        // /.nav-collapse
+    .container
+      // Main component for a primary marketing message or call to action
+      .jumbotron
+        h1 Navbar example
+        p
+          | This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.
+        p To see the difference between static and fixed top navbars, just scroll.
+        p
+          a.btn.btn-lg.btn-primary(href='../../components/#navbar', role='button') View navbar docs &raquo;
+    // /container
+    
+    // Bootstrap core JavaScript
+    // ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='#{pathToAssets}/dist/js/bootstrap.min.js')
 
-block content
-  h1= title
-  p Welcome to #{title}
+  //- h1= title
+  //- p Welcome to #{title}
   
-  form(id='main_form')
-    h2  Auto 
-    h3 Starting configuration
-    input#config(type='radio', name='config', value='1')
-    br
-    input#config(type='radio', name='config', value='2')
-    br
-    input#config(type='radio', name='config', value='3')
-    br
-    h3 Materials in Auto Zone
-    input#bins(type='text', name='bins_auto', value='0')
-    input#totes(type='text', name='totes_auto', value='0')
-    input#noodles(type='text', name='noodles_auto', value='0')
-    h3 Stacking yellow bins
-    input#stack(type='radio', name='bins', value='yes')
-    input#stack(type='radio', name='bins', value='no', checked)
-    br
-    h3 Robot ends in auto zone
-    input#autoZone(type='radio', name='auto', value='yes')
-    input#autoZone(type='radio', name='auto', value='no', checked)
-    br
-    h2  teleop
-    h3  Things that can be manipulated: 
-    input#recycling(type='checkbox', name='recylingBins', value='recyling bins')
-    br
-    input#totes(type='checkbox', name='totes', value='totes')
-    br
-    input#noodles(type='checkbox', name='noodles', value='noodles')
-    br
-    h3  Coopertition Information 
-    input#coopertitionOption(type='radio', name='coop', value='stack')
-    br
-    input#coopOption(type='radio', name='coop', value='set')
-    br
-    input#coopOption(type='radio', name='coop', value='none', checked)
-    h3  Where do they collect totes from 
-    input#fromArena(type='checkbox', name='cGround', value='ground')
-    br
-    input#fromPlayer(type='checkbox', name='cHuman', value='human')
-    br
-    h3  Preference of tote collection 
-    input#collectPreference(type='radio', name='collect', value='ground')
-    br
-    input#collectPreference(type='radio', name='collect', value='human')
-    br
-    input#collectPreference(type='radio', name='collect', value='none', checked)
-    h3  Tip any totes or bins 
-    input#tipTotes(type='radio', name='pickup', value='yes')
-    input#tipTotes(type='radio', name='pickup', value='no', checked)
-    br
-    h3  # of stacks knocked down 
-    input#stacksKnocked(type='text', name='stacksKnocked', value='0')
-    br
-    h3  Max crates 
-    input#maxCrates(type='text', name='maxCrates', value='0')
-    h3  Go over platform 
-    input#overPlatform(type='radio', name='platform', value='yes')
-    input#overPlatform(type='radio', name='platform', value='no', checked)
-    br
-    br
-    br
-    button#submit_button Submit
-  form
-    button Get Data
-  form
-    button.clear clear
+  //- form(id='main_form')
+  //-   h2  Auto 
+  //-   h3 Starting configuration
+  //-   input#config(type='radio', name='config', value='1')
+  //-   br
+  //-   input#config(type='radio', name='config', value='2')
+  //-   br
+  //-   input#config(type='radio', name='config', value='3')
+  //-   br
+  //-   h3 Materials in Auto Zone
+  //-   input#bins(type='text', name='bins_auto', value='0')
+  //-   input#totes(type='text', name='totes_auto', value='0')
+  //-   input#noodles(type='text', name='noodles_auto', value='0')
+  //-   h3 Stacking yellow bins
+  //-   input#stack(type='radio', name='bins', value='yes')
+  //-   input#stack(type='radio', name='bins', value='no', checked)
+  //-   br
+  //-   h3 Robot ends in auto zone
+  //-   input#autoZone(type='radio', name='auto', value='yes')
+  //-   input#autoZone(type='radio', name='auto', value='no', checked)
+  //-   br
+  //-   h2  teleop
+  //-   h3  Things that can be manipulated: 
+  //-   input#recycling(type='checkbox', name='recylingBins', value='recyling bins')
+  //-   br
+  //-   input#totes(type='checkbox', name='totes', value='totes')
+  //-   br
+  //-   input#noodles(type='checkbox', name='noodles', value='noodles')
+  //-   br
+  //-   h3  Coopertition Information 
+  //-   input#coopertitionOption(type='radio', name='coop', value='stack')
+  //-   br
+  //-   input#coopOption(type='radio', name='coop', value='set')
+  //-   br
+  //-   input#coopOption(type='radio', name='coop', value='none', checked)
+  //-   h3  Where do they collect totes from 
+  //-   input#fromArena(type='checkbox', name='cGround', value='ground')
+  //-   br
+  //-   input#fromPlayer(type='checkbox', name='cHuman', value='human')
+  //-   br
+  //-   h3  Preference of tote collection 
+  //-   input#collectPreference(type='radio', name='collect', value='ground')
+  //-   br
+  //-   input#collectPreference(type='radio', name='collect', value='human')
+  //-   br
+  //-   input#collectPreference(type='radio', name='collect', value='none', checked)
+  //-   h3  Tip any totes or bins 
+  //-   input#tipTotes(type='radio', name='pickup', value='yes')
+  //-   input#tipTotes(type='radio', name='pickup', value='no', checked)
+  //-   br
+  //-   h3  # of stacks knocked down 
+  //-   input#stacksKnocked(type='text', name='stacksKnocked', value='0')
+  //-   br
+  //-   h3  Max crates 
+  //-   input#maxCrates(type='text', name='maxCrates', value='0')
+  //-   h3  Go over platform 
+  //-   input#overPlatform(type='radio', name='platform', value='yes')
+  //-   input#overPlatform(type='radio', name='platform', value='no', checked)
+  //-   br
+  //-   br
+  //-   br
+  //-   button#submit_button Submit
+  //- form
+  //-   button Get Data
+  //- form
+  //-   button.clear clear
