@@ -42,7 +42,8 @@ collect TEXT NOT NULL,
 pickup TEXT NOT NULL,
 stacksKnocked TEXT NOT NULL,
 maxCrates TEXT NOT NULL,
-platform TEXT NOT NULL
+platform TEXT NOT NULL,
+teamNumber TEXT NOT NULL
 )
 */
 
@@ -93,12 +94,12 @@ router.post('/save', function(req, res, next) {
 
   var query = "INSERT INTO scouting";
   query += " (config, bins_auto, totes_auto, noodles_auto, bins, auto, recyclingBins, totes, noodles,";
-  query += " coop, cGround, cHuman, collect, pickup, stacksKnocked, maxCrates, platform) VALUES ('";
+  query += " coop, cGround, cHuman, collect, pickup, stacksKnocked, maxCrates, platform, teamNumber) VALUES ('";
   query += req.body.config + "', '" + req.body.bins_auto + "', '" + req.body.totes_auto + "', '" + req.body.noodles_auto + "', '";
   query += req.body.bins + "', '" + req.body.auto + "', '" + req.body.recylingBins + "', '" + req.body.totes + "', '";
   query += req.body.noodles + "', '" + req.body.coop + "', '" + req.body.cGround + "', '" + req.body.cHuman + "', '";
   query += req.body.collect + "', '" + req.body.pickup + "', '" + req.body.stacksKnocked + "', '" + req.body.maxCrates + "', '";
-  query += req.body.platform + "');";
+  query += req.body.platform + "', '" + req.body.teamNumber + "');";
 
   connection.connect();
 
