@@ -60,7 +60,11 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(app.get('port'), function() {
-  console.log('Express server listening on port %d in %s mode', app.get('port'), app.get('env'));
+    console.log('***************************************');
+    console.log('3061 Scouting App (2014-2015)');
+    console.log('***************************************');
+    console.log('Server listening on port %d in %s mode', app.get('port'), app.get('env'));
+    console.log('***************************************');
 });
 
 app.get('/', function(req, res, next){

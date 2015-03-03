@@ -8,7 +8,7 @@ html(lang='en')
     meta(name='author', content='')
     title 3061 Scouting
     // Bootstrap core CSS
-    link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet')
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //if lt IE 9
       script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
@@ -26,9 +26,9 @@ html(lang='en')
           a.navbar-brand(href='#') 3061 Scouting
         .navbar-collapse.collapse
           ul.nav.navbar-nav
-            li.active
-              a(href='/') Home
             li
+              a(href='/') Home
+            li.active
               a(href='/pit') Pit Scouting
             li
               a(href='/match') Match scouting
@@ -36,8 +36,86 @@ html(lang='en')
     .container
       // Main component for a primary marketing message or call to action
       .jumbotron
-        h1 Huskie Robotics Scouting
-        p Use the navbar to pick pit scouting or match scouting
+        h1 Pit Scouting
+        
+        form.form-horizontal
+          fieldset
+            legend Pit Scouting
+            .form-group
+              label Team Number
+                input.form-control(type="number", placeholder="3061", name="teamNumber")
+            .checkbox
+              label
+                input(type="checkbox", name="mani_RC")
+                |  Can manipulate upside RC's?
+            .checkbox
+              label
+                input(type="checkbox", name="mani_totes")
+                |  Can manipulate upside totes's?
+            .checkbox
+              label
+                input(type="checkbox", name="push_litter_landfill")
+                |  Can push litter into landfill?
+            .checkbox
+              label
+                input(type="checkbox", name="intake_tote_landfill")
+                |  Can intake totes from landfill?
+            .checkbox
+              label
+                input(type="checkbox", name="intake_tote_feeder")
+                |  Can intake totes from human feeder station?
+            .checkbox
+              label
+                input(type="checkbox", name="active_tote_intake")
+                |  Active intake for totes?
+            .checkbox
+              label
+                input(type="checkbox", name="active_RC_intake")
+                |  Active intake for RC's?
+            .form-group
+              label Drivetrain type
+                input.form-control(type="text", placeholder="mec, tank, h, 2+2, etc.", name="drivetrain_type")
+            .form-group
+              label Preferred way to get totes 
+              .radio
+                label
+                  input#optionsRadios1(type='radio', name='pref_tote_getting', value='landfill')
+                  |     Landfill
+              .radio
+                label
+                  input#optionsRadios2(type='radio', name='pref_tote_getting', value='feeder')
+                  |     Feeder
+              .radio
+                label
+                  input(type='radio', name="pref_tote_getting", value='na', checked='')
+                  | N/A
+
+
+
+
+            
+            
+
+        //- Can manipulate upside RC’s {Y/N}
+        //- Can manipulate upside totes {Y/N}
+        //- Can push litter into landfill {Y/N}
+        //- Can intake totes from landfill {Y/N}
+        //- Can intake totes from human feeder station {Y/N}
+        //- Active intake for totes {Y/N}
+        //- Active intake for RC’s {Y/N}
+        //- Drivetrain type {Mecanum, Tank, H-drive, 2+2, Other w/ description in notes}
+        //- Preferred place of tote acquisition {Landfill, Human Feeder Station}
+        //- Able to deposit totes on step {Y/N}
+        //- Able to acquire totes on step {Y/N}
+        //- Able to acquire upside down totes {Y/N}
+        //- Able to manipulate upside down totes {Y/N}
+        //- Able to acquire sideways RC’s {Y/N}
+        //- Able to score sideways RC’s {Y/N}
+        //- Able to right a sideways RC’s {Y/N}
+        //- Able to stack on robot {Y/N}
+        //- Internal stacking {Y/N}
+        //- Able to drive over platform {Y/N}
+
         
         //- form.form-horizontal
         //-   fieldset

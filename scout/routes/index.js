@@ -84,6 +84,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Scouting' });
 });
 
+router.get('/pit', function(req, res, next) {
+  res.render('pit');
+});
+
 router.post('/save', function(req, res, next) {
 	console.log('hey');
 	console.log(req.body);
