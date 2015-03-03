@@ -37,8 +37,8 @@ html(lang='en')
       // Main component for a primary marketing message or call to action
       .jumbotron
         h1 Pit Scouting
-        
-        form.form-horizontal#pit_form
+
+        form#pit_form
           fieldset
             legend Pit Scouting
             .form-group
@@ -144,7 +144,8 @@ html(lang='en')
               label Max height for RC placement
                 input.form-control(type='number', placeholder='0-6', name='max_RC_height')
             br
-            button.btn.btn-primary#pit_submit Submit
+            .text-center
+              button.btn.btn-success.btn-lg#pit_submit Submit
 
         //- Can manipulate upside RC’s {Y/N}
         //- Can manipulate upside totes {Y/N}

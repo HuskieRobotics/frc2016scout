@@ -36,116 +36,81 @@ html(lang='en')
     .container
       // Main component for a primary marketing message or call to action
       .jumbotron
+
         h1 Match Scouting
 
-        form.form-horizontal#match_form
+        form#match_form
           fieldset
             legend Match Scouting
             .form-group
               label Team Number
                 input.form-control(type="number", placeholder="3061", name="teamNumber")
-            .checkbox
-              label
-                input(type="checkbox", name="mani_RC")
-                |  Can manipulate upside RC's?
-            .checkbox
-              label
-                input(type="checkbox", name="mani_totes")
-                |  Can manipulate upside totes's?
-            .checkbox
-              label
-                input(type="checkbox", name="push_litter_landfill")
-                |  Can push litter into landfill?
-            .checkbox
-              label
-                input(type="checkbox", name="intake_tote_landfill")
-                |  Can intake totes from landfill?
-            .checkbox
-              label
-                input(type="checkbox", name="intake_tote_feeder")
-                |  Can intake totes from human feeder station?
-            .checkbox
-              label
-                input(type="checkbox", name="active_tote_intake")
-                |  Active intake for totes?
-            .checkbox
-              label
-                input(type="checkbox", name="active_RC_intake")
-                |  Active intake for RC's?
-            .form-group
-              label Drivetrain type
-                input.form-control(type="text", placeholder="mec, tank, h, 2+2, etc.", name="drivetrain_type")
-            .form-group
-              label Preferred way to get totes 
-              .radio
-                label
-                  input#optionsRadios1(type='radio', name='pref_tote_getting', value='landfill')
-                  |     Landfill
-              .radio
-                label
-                  input#optionsRadios2(type='radio', name='pref_tote_getting', value='feeder')
-                  |     Feeder
-              .radio
-                label
-                  input(type='radio', name="pref_tote_getting", value='na', checked='')
-                  | N/A
-            .checkbox
-              label
-                input(type="checkbox", name="deposit_totes_step")
-                |  Able to deposit totes on step?
-            .checkbox
-              label
-                input(type="checkbox", name="acquire_totes_step")
-                |  Able to acquire totes on step?
-            .checkbox
-              label
-                input(type="checkbox", name="acquire_upside_down_totes")
-                |  Able to acquire upside down totes?
-            .checkbox
-              label
-                input(type="checkbox", name="mani_upside_down_totes")
-                |  Able to manipulate upside down totes?
-            .checkbox
-              label
-                input(type="checkbox", name="acquire_sideways_RC")
-                |  Able to acquire sideways RC's?
-            .checkbox
-              label
-                input(type="checkbox", name="score_sideways_RC")
-                |  Able to score sideways RC's?
-            .checkbox
-              label
-                input(type="checkbox", name="right_sideways_RC")
-                |  Able to right a sideways RC?
-            .checkbox
-              label
-                input(type="checkbox", name="stack_on_robot")
-                |  Able to stack on robot?
-            .checkbox
-              label
-                input(type="checkbox", name="internal_stacking")
-                |  Internal stacking?
-            .checkbox
-              label
-                input(type="checkbox", name="drive_over_platform")
-                |  Able to drive over platform?]
-            .checkbox
-              label
-                input(type='checkbox', name='acquire_totes_step')
-                | Able to acquire totes from step?
-            .checkbox
-              label
-                input(type='checkbox', name='acquire_RC_step')
-                | Able to acquire RC's from step?
-            .form-group
-              label Max height for tote stack
-                input.form-control(type='number', placeholder='0-6', name='max_tote_height')
-            .form-group
-              label Max height for RC placement
-                input.form-control(type='number', placeholder='0-6', name='max_RC_height')
-            br
-            button.btn.btn-primary#match_submit Submit
-        
+            div.row
+              div.col-xs-6
+                h3 Autonomous
+                .form-group
+                  label Starting position
+                    input.form-control(type="number", placeholder="use map", name="auto_starting_config")
+                .form-group
+                  label Number of RC's moved from stage to auto zone
+                    input.form-control(type="number", placeholder="0", name="RC_stage_to_auto")
+                .form-group
+                  label Number of RC's moved from step
+                    input.form-control(type="number", placeholder="0", name="RC_from_step")
+                .form-group
+                  label Number of RC's moved from step to auto zone
+                    input.form-control(type='number', placeholder='0', name='RC_step_to_auto')
+                .form-group
+                  label Number of totes moved to auto zone
+                    input.form-control(type='number', placeholder='0', name='totes_to_auto')
+                .checkbox
+                  label
+                    input(type='checkbox', name='totes_auto_stacked')
+                    | Were they stacked?
+                .checkbox
+                  label
+                    input(type="checkbox", name="req_others_move_RC")
+                    | Required other robots to move RC's out of the way?
+                .checkbox
+                  label
+                    input(type='checkbox', name='req_knock_over_RC')
+                    | Required knocking over RC's
+                .checkbox 
+                  label
+                    input(type="checkbox", name="fully_moves_to_auto")
+                    | Moves to auto zone fully?
+              div.col-xs-6
+                h3 Teleop
+                .form-group
+                  label Number of totes collected from feeder station
+                    input.form-control(type="number", name="num_totes_from_feeder")
+                .form-group
+                  label Number of totes collected from landfill
+                    input.form-control(type="number", name="num_totes_from_landfill")
+                .form-group
+                  label Number of RC's acquired from step
+                    input.form-control(type="number", name="num_RC_from_step")
+                .form-group
+                  label Number of fouls called against
+                    input.form-control(type="number", name="num_fouls_called")
+                .checkbox
+                  label
+                    input(type="checkbox", name="robot_tipped")
+                    | Did the robot tip over?
+
+                button.btn.btn-sm.btn-info(type="button", data-toggle="popover",title="Unprocessed vs. Processed",
+                  data-content="Unprocessed is the litter you throw onto the opposite alliance that goes past their landfill. Processed is the litter the other team throws into the zone past our landfill that we move into the landfill") Unprocessed vs. Processed
+                
+                .form-group
+                  label Unprocessed Litter
+                    input.form-control(type="number", name="unprocessed_litter")
+                .form-group
+                  label Processed Litter
+                    input.form-control(type="number", name="processed litter")
+
+            .text-center
+              button.btn.btn-success.btn-lg#match_submit Submit
+
     // /container
     
     // Bootstrap core JavaScript

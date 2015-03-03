@@ -1,13 +1,17 @@
 $(document).ready(function(){
+	$('[data-toggle="popover"]').popover()
 	$("#submit_button").click(function () {
 		$.post("/save", $("#main_form").serialize()).done(function(data){
 			alert(data);
 		});
 	});
 	$("#pit_submit").click(function() {
-		alert('hey');
+		alert('pit clicked');
 		// $.post("/save_pit", $("#match_form").serialize()).done(function(data){
 			// alert(data);
 		// });
+	});
+	$("#match_submit").click(function() {
+		alert('match clicked');
 	});
 });
