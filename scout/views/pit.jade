@@ -38,7 +38,7 @@ html(lang='en')
       .jumbotron
         h1 Pit Scouting
         
-        form.form-horizontal
+        form.form-horizontal#pit_form
           fieldset
             legend Pit Scouting
             .form-group
@@ -89,12 +89,48 @@ html(lang='en')
                 label
                   input(type='radio', name="pref_tote_getting", value='na', checked='')
                   | N/A
-
-
-
-
-            
-            
+            .checkbox
+              label
+                input(type="checkbox", name="deposit_totes_step")
+                |  Able to deposit totes on step?
+            .checkbox
+              label
+                input(type="checkbox", name="acquire_totes_step")
+                |  Able to acquire totes on step?
+            .checkbox
+              label
+                input(type="checkbox", name="acquire_upside_down_totes")
+                |  Able to acquire upside down totes?
+            .checkbox
+              label
+                input(type="checkbox", name="mani_upside_down_totes")
+                |  Able to manipulate upside down totes?
+            .checkbox
+              label
+                input(type="checkbox", name="acquire_sideways_RC")
+                |  Able to acquire sideways RC's?
+            .checkbox
+              label
+                input(type="checkbox", name="score_sideways_RC")
+                |  Able to score sideways RC's?
+            .checkbox
+              label
+                input(type="checkbox", name="right_sideways_RC")
+                |  Able to right a sideways RC?
+            .checkbox
+              label
+                input(type="checkbox", name="stack_on_robot")
+                |  Able to stack on robot?
+            .checkbox
+              label
+                input(type="checkbox", name="internal_stacking")
+                |  Internal stacking?
+            .checkbox
+              label
+                input(type="checkbox", name="drive_over_platform")
+                |  Able to drive over platform?
+            br
+            button.btn.btn-primary#pit_submit Submit
 
         //- Can manipulate upside RC’s {Y/N}
         //- Can manipulate upside totes {Y/N}

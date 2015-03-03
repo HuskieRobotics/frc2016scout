@@ -89,12 +89,8 @@ router.get('/pit', function(req, res, next) {
 });
 
 router.post('/save', function(req, res, next) {
-	console.log('hey');
+	console.log('/save');
 	console.log(req.body);
-	// connection.query('', function(err, rows, fields) {
-	// 	console.log("oh");
-	// // });s
-  
 
   var query = "INSERT INTO scouting";
   query += " (config, bins_auto, totes_auto, noodles_auto, bins, auto, recyclingBins, totes, noodles,";
@@ -115,6 +111,30 @@ router.post('/save', function(req, res, next) {
 
   connection.end();
 
+});
+
+router.post('/save_pit', function(req, res, next){
+  console.log('/save_pit');
+  console.log(req.body);
+
+  var query = "INSERT INTO scouting";
+  query += " (config, bins_auto, totes_auto, noodles_auto, bins, auto, recyclingBins, totes, noodles,";
+  query += " coop, cGround, cHuman, collect, pickup, stacksKnocked, maxCrates, platform, teamNumber) VALUES ('";
+  query += req.body.config + "', '" + req.body.bins_auto + "', '" + req.body.totes_auto + "', '" + req.body.noodles_auto + "', '";
+  query += req.body.bins + "', '" + req.body.auto + "', '" + req.body.recylingBins + "', '" + req.body.totes + "', '";
+  query += req.body.noodles + "', '" + req.body.coop + "', '" + req.body.cGround + "', '" + req.body.cHuman + "', '";
+  query += req.body.collect + "', '" + req.body.pickup + "', '" + req.body.stacksKnocked + "', '" + req.body.maxCrates + "', '";
+  query += req.body.platform + "', '" + req.body.teamNumber + "');";
+
+  connection.connect();
+
+  console.log(query);
+
+  connection.query(query, function(err, rows, fields){
+    if (err) console.log(err);
+  });
+
+  connection.end();
 });
 
 // connection.end();
