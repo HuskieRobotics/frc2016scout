@@ -28,19 +28,19 @@ html(lang='en')
           ul.nav.navbar-nav
             li
               a(href='/') Home
-            li.active
-              a(href='/pit') Pit Scouting
             li
+              a(href='/pit') Pit Scouting
+            li.active
               a(href='/match') Match scouting
         // /.nav-collapse
     .container
       // Main component for a primary marketing message or call to action
       .jumbotron
-        h1 Pit Scouting
-        
-        form.form-horizontal#pit_form
+        h1 Match Scouting
+
+        form.form-horizontal#match_form
           fieldset
-            legend Pit Scouting
+            legend Match Scouting
             .form-group
               label Team Number
                 input.form-control(type="number", placeholder="3061", name="teamNumber")
@@ -144,72 +144,8 @@ html(lang='en')
               label Max height for RC placement
                 input.form-control(type='number', placeholder='0-6', name='max_RC_height')
             br
-            button.btn.btn-primary#pit_submit Submit
-
-        //- Can manipulate upside RC’s {Y/N}
-        //- Can manipulate upside totes {Y/N}
-        //- Can push litter into landfill {Y/N}
-        //- Can intake totes from landfill {Y/N}
-        //- Can intake totes from human feeder station {Y/N}
-        //- Active intake for totes {Y/N}
-        //- Active intake for RC’s {Y/N}
-        //- Drivetrain type {Mecanum, Tank, H-drive, 2+2, Other w/ description in notes}
-        //- Preferred place of tote acquisition {Landfill, Human Feeder Station}
-        //- Able to deposit totes on step {Y/N}
-        //- Able to acquire totes on step {Y/N}
-        //- Able to acquire upside down totes {Y/N}
-        //- Able to manipulate upside down totes {Y/N}
-        //- Able to acquire sideways RC’s {Y/N}
-        //- Able to score sideways RC’s {Y/N}
-        //- Able to right a sideways RC’s {Y/N}
-        //- Able to stack on robot {Y/N}
-        //- Internal stacking {Y/N}
-        //- Able to drive over platform {Y/N}
-
+            button.btn.btn-primary#match_submit Submit
         
-        //- form.form-horizontal
-        //-   fieldset
-        //-     legend Controls Bootstrap supports
-        //-     div.control-group
-        //-       label.control-label(for="input01") Text input
-        //-       div.controls
-        //-         input.input-xlarge#input01(type="text")
-        //-         p.help-block In addition to freeform text, any HTML5 text-based input appears like so.
-        //-     div.control-group
-        //-       label.control-label(for="optionsCheckbox") Checkbox
-        //-       div.controls
-        //-         label.checkbox
-        //-           input#optionsCheckbox(type="checkbox", value="option1", placeholder="option1")
-        //-           Option one is this and that—be sure to include why it's great
-        //-     div.control-group
-        //-       label.control-label(for="select01") Select list
-        //-       div.controls
-        //-         select#select01
-        //-           option something
-        //-           option 2
-        //-           option 3
-        //-           option 4
-        //-           option 5
-        //-     div.control-group
-        //-       label.control-label(for="multiSelect") Multicon-select
-        //-       div.controls
-        //-         select#multiSelect(multiple="multiple")
-        //-           option 1
-        //-           option 2
-        //-           option 3
-        //-           option 4
-        //-           option 5
-        //-     div.control-group
-        //-       label.control-label(for="fileInput") File input
-        //-       div.controls
-        //-         input.input-file#fileInput(type="file")
-        //-     div.control-group
-        //-       label.control-label(for="textarea") Textarea
-        //-       div.controls
-        //-         textarea.input-xlarge#textarea(rows="3") 
-        //-     div.form-actions
-        //-       button.btn.btn-primary(type="submit") Save changes
-        //-       button.btn Cancel
     // /container
     
     // Bootstrap core JavaScript

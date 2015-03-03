@@ -88,6 +88,10 @@ router.get('/pit', function(req, res, next) {
   res.render('pit');
 });
 
+router.get('/match', function(req, res, next) {
+  res.render('match');
+});
+
 router.post('/save', function(req, res, next) {
 	console.log('/save');
 	console.log(req.body);
