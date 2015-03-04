@@ -45,6 +45,9 @@ html(lang='en')
             .form-group
               label Team Number
                 input.form-control(type="number", placeholder="3061", name="teamNumber")
+            .form-group
+              label Match Number
+                input.form-control(type="number", placeholder="1", name="matchNumber")
             div.row
               div.col-xs-6
                 h3 Autonomous
@@ -107,7 +110,22 @@ html(lang='en')
                 .form-group
                   label Processed Litter
                     input.form-control(type="number", name="processed litter")
-
+            .text-center
+              h3 Stack Information
+            .row
+              .col-xs-2.col-xs-offset-1 1
+              .col-xs-2 2
+              .col-xs-2 3
+              .col-xs-2 4
+              .col-xs-2 5
+              .col-xs-1
+            .row
+              .col-xs-2.col-xs-offset-1 6
+              .col-xs-2 7
+              .col-xs-2 8
+              .col-xs-2 9
+              .col-xs-2 10
+              .col-xs-1
             .text-center
               button.btn.btn-success.btn-lg#match_submit Submit
 
