@@ -7,11 +7,14 @@ $(document).ready(function(){
 	});
 	$("#pit_submit").click(function() {
 		alert('pit clicked');
-		// $.post("/save_pit", $("#match_form").serialize()).done(function(data){
-			// alert(data);
-		// });
+		$.post("/save_pit", $("#pit_form").serialize()).done(function(data){
+			alert(data);
+		});
 	});
 	$("#match_submit").click(function() {
 		alert('match clicked');
+		$.post("/save_match", $("#match_form").serialize()).done(function(data){
+			alert(data);
+		});
 	});
 });

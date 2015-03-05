@@ -43,7 +43,7 @@ html(lang='en')
             legend Pit Scouting
             .form-group
               label Team Number
-                input.form-control(type="number", placeholder="3061", name="teamNumber")
+                input.form-control(type="number", placeholder="3061", name="teamNumber", value=0)
             .checkbox
               label
                 input(type="checkbox", name="mani_RC")
@@ -131,18 +131,14 @@ html(lang='en')
                 |  Able to drive over platform?]
             .checkbox
               label
-                input(type='checkbox', name='acquire_totes_step')
-                | Able to acquire totes from step?
-            .checkbox
-              label
                 input(type='checkbox', name='acquire_RC_step')
                 | Able to acquire RC's from step?
             .form-group
               label Max height for tote stack
-                input.form-control(type='number', placeholder='0-6', name='max_tote_height')
+                input.form-control(type='number', placeholder='0-6', name='max_tote_height', value=0)
             .form-group
               label Max height for RC placement
-                input.form-control(type='number', placeholder='0-6', name='max_RC_height')
+                input.form-control(type='number', placeholder='0-6', name='max_RC_height', value=0)
             br
             .text-center
               button.btn.btn-success.btn-lg#pit_submit Submit
