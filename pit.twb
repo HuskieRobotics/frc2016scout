@@ -1,0 +1,1725 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='mac' version='8.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8300.15.0114.2230                                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource caption='pit (scout)' inline='true' name='mysql.42068.002632314800' version='8.3'>
+      <connection class='mysql' dbname='scout' odbc-native-protocol='yes' port='3306' server='127.0.0.1' source-charset='' username='root'>
+        <relation name='pit' table='[pit]' type='table' />
+        <refresh increment-key='' incremental-updates='false'>
+        </refresh>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>teamNumber</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[teamNumber]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>teamNumber</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mani_RC</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mani_RC]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>mani_RC</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mani_totes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mani_totes]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>mani_totes</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>push_litter_landfill</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[push_litter_landfill]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>push_litter_landfill</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>intake_tote_landfill</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[intake_tote_landfill]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>intake_tote_landfill</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>intake_tote_feeder</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[intake_tote_feeder]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>intake_tote_feeder</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>active_tote_intake</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[active_tote_intake]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>active_tote_intake</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>active_RC_intake</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[active_RC_intake]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>active_RC_intake</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drivetrain_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drivetrain_type]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>drivetrain_type</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pref_tote_getting</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pref_tote_getting]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>pref_tote_getting</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deposit_totes_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[deposit_totes_step]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>deposit_totes_step</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acquire_totes_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[acquire_totes_step]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>acquire_totes_step</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acquire_upside_down_totes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[acquire_upside_down_totes]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>acquire_upside_down_totes</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mani_upside_down_totes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mani_upside_down_totes]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>mani_upside_down_totes</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acquire_sideways_RC</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[acquire_sideways_RC]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>acquire_sideways_RC</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_sideways_RC</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[score_sideways_RC]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>score_sideways_RC</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>right_sideways_RC</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[right_sideways_RC]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>right_sideways_RC</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stack_on_robot</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stack_on_robot]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>stack_on_robot</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>internal_stacking</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[internal_stacking]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>internal_stacking</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drive_ovver_platform</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drive_ovver_platform]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>drive_ovver_platform</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acquire_RC_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[acquire_RC_step]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>acquire_RC_step</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_tote_height</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[max_tote_height]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>max_tote_height</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_RC_height</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[max_RC_height]</local-name>
+            <parent-name>[pit]</parent-name>
+            <remote-alias>max_RC_height</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='acquire RC step' datatype='string' name='[acquire_RC_step]' role='dimension' type='nominal'>
+      </column>
+      <column caption='acquire sideways RC' datatype='string' name='[acquire_sideways_RC]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Acquire Totes Step' datatype='string' name='[acquire_totes_step]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Acquire Upside Down Totes' datatype='string' name='[acquire_upside_down_totes]' role='dimension' type='nominal'>
+      </column>
+      <column caption='active RC intake' datatype='string' name='[active_RC_intake]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Active Tote Intake' datatype='string' name='[active_tote_intake]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Deposit Totes Step' datatype='string' name='[deposit_totes_step]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Drive Ovver Platform' datatype='string' name='[drive_ovver_platform]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Drivetrain Type' datatype='string' name='[drivetrain_type]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Intake Tote Feeder' datatype='string' name='[intake_tote_feeder]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Intake Tote Landfill' datatype='string' name='[intake_tote_landfill]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Internal Stacking' datatype='string' name='[internal_stacking]' role='dimension' type='nominal'>
+      </column>
+      <column caption='mani RC' datatype='string' name='[mani_RC]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Mani Totes' datatype='string' name='[mani_totes]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Mani Upside Down Totes' datatype='string' name='[mani_upside_down_totes]' role='dimension' type='nominal'>
+      </column>
+      <column caption='max RC height' datatype='integer' name='[max_RC_height]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Max Tote Height' datatype='integer' name='[max_tote_height]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Pref Tote Getting' datatype='string' name='[pref_tote_getting]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Push Litter Landfill' datatype='string' name='[push_litter_landfill]' role='dimension' type='nominal'>
+      </column>
+      <column caption='right sideways RC' datatype='string' name='[right_sideways_RC]' role='dimension' type='nominal'>
+      </column>
+      <column caption='score sideways RC' datatype='string' name='[score_sideways_RC]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Stack On Robot' datatype='string' name='[stack_on_robot]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Team Number' datatype='integer' name='[teamNumber]' role='dimension' type='ordinal'>
+      </column>
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='/Users/yasha/Dropbox/Senior/Clubs/Robotics/frc2015scout/tableau shit/pit (scout).tde' schema='Extract' tablename='Extract' update-time='03/05/2015 06:22:44 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='3' timestamp-start='2015-03-05 06:22:44.269' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>acquire_RC_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[acquire_RC_step]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>acquire_RC_step</remote-alias>
+              <ordinal>1</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>acquire_sideways_RC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[acquire_sideways_RC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>acquire_sideways_RC</remote-alias>
+              <ordinal>2</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;desc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>acquire_totes_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[acquire_totes_step]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>acquire_totes_step</remote-alias>
+              <ordinal>3</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>acquire_upside_down_totes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[acquire_upside_down_totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>acquire_upside_down_totes</remote-alias>
+              <ordinal>4</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;desc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>active_RC_intake</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[active_RC_intake]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>active_RC_intake</remote-alias>
+              <ordinal>5</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>active_tote_intake</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[active_tote_intake]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>active_tote_intake</remote-alias>
+              <ordinal>6</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;on&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>deposit_totes_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[deposit_totes_step]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>deposit_totes_step</remote-alias>
+              <ordinal>7</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;undefined&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>drive_ovver_platform</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[drive_ovver_platform]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>drive_ovver_platform</remote-alias>
+              <ordinal>8</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;undefined&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>drivetrain_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[drivetrain_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>drivetrain_type</remote-alias>
+              <ordinal>9</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;mech&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;tank&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>intake_tote_feeder</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[intake_tote_feeder]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>intake_tote_feeder</remote-alias>
+              <ordinal>10</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>intake_tote_landfill</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[intake_tote_landfill]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>intake_tote_landfill</remote-alias>
+              <ordinal>11</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;on&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>internal_stacking</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[internal_stacking]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>internal_stacking</remote-alias>
+              <ordinal>12</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mani_RC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mani_RC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mani_RC</remote-alias>
+              <ordinal>13</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;on&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mani_totes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mani_totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mani_totes</remote-alias>
+              <ordinal>14</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mani_upside_down_totes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mani_upside_down_totes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mani_upside_down_totes</remote-alias>
+              <ordinal>15</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>max_RC_height</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[max_RC_height]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>max_RC_height</remote-alias>
+              <ordinal>16</ordinal>
+              <family>pit</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>6</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>max_tote_height</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[max_tote_height]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>max_tote_height</remote-alias>
+              <ordinal>17</ordinal>
+              <family>pit</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>2</statistic>
+                <statistic aggregation='Max' datatype='integer'>6</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pref_tote_getting</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pref_tote_getting]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pref_tote_getting</remote-alias>
+              <ordinal>18</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;feeder&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;feeder&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>push_litter_landfill</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[push_litter_landfill]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>push_litter_landfill</remote-alias>
+              <ordinal>19</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>right_sideways_RC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[right_sideways_RC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>right_sideways_RC</remote-alias>
+              <ordinal>20</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>score_sideways_RC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[score_sideways_RC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>score_sideways_RC</remote-alias>
+              <ordinal>21</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>stack_on_robot</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[stack_on_robot]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stack_on_robot</remote-alias>
+              <ordinal>22</ordinal>
+              <family>pit</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>1024</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;on&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;undefined&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4096</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>teamNumber</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[teamNumber]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>teamNumber</remote-alias>
+              <ordinal>23</ordinal>
+              <family>pit</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>3</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options export-orientation='landscape'>
+        <title>
+          <formatted-text>
+            <run>Pit report&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pit (scout)' name='mysql.42068.002632314800' />
+          </datasources>
+          <datasource-dependencies datasource='mysql.42068.002632314800'>
+            <column caption='acquire RC step' datatype='string' name='[acquire_RC_step]' role='dimension' type='nominal'>
+            </column>
+            <column caption='acquire sideways RC' datatype='string' name='[acquire_sideways_RC]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Acquire Totes Step' datatype='string' name='[acquire_totes_step]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Acquire Upside Down Totes' datatype='string' name='[acquire_upside_down_totes]' role='dimension' type='nominal'>
+            </column>
+            <column caption='active RC intake' datatype='string' name='[active_RC_intake]' role='dimension' type='nominal'>
+            </column>
+            <column caption='max RC height' datatype='integer' name='[max_RC_height]' role='measure' type='quantitative'>
+            </column>
+            <column caption='Max Tote Height' datatype='integer' name='[max_tote_height]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[acquire_RC_step]' derivation='None' name='[none:acquire_RC_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[acquire_sideways_RC]' derivation='None' name='[none:acquire_sideways_RC:nk]' pivot='key' type='nominal' />
+            <column-instance column='[acquire_totes_step]' derivation='None' name='[none:acquire_totes_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[acquire_upside_down_totes]' derivation='None' name='[none:acquire_upside_down_totes:nk]' pivot='key' type='nominal' />
+            <column-instance column='[active_RC_intake]' derivation='None' name='[none:active_RC_intake:nk]' pivot='key' type='nominal' />
+            <column-instance column='[teamNumber]' derivation='None' name='[none:teamNumber:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[max_RC_height]' derivation='Sum' name='[sum:max_RC_height:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[max_tote_height]' derivation='Sum' name='[sum:max_tote_height:qk]' pivot='key' type='quantitative' />
+            <column caption='Team Number' datatype='integer' name='[teamNumber]' role='dimension' type='ordinal'>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[mysql.42068.002632314800].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[mysql.42068.002632314800].[sum:max_tote_height:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[mysql.42068.002632314800].[sum:max_RC_height:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[mysql.42068.002632314800].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[mysql.42068.002632314800].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([mysql.42068.002632314800].[none:teamNumber:ok] / ([mysql.42068.002632314800].[none:acquire_RC_step:nk] / ([mysql.42068.002632314800].[none:acquire_sideways_RC:nk] / ([mysql.42068.002632314800].[none:acquire_totes_step:nk] / ([mysql.42068.002632314800].[none:acquire_upside_down_totes:nk] / [mysql.42068.002632314800].[none:active_RC_intake:nk])))))</rows>
+        <cols>[mysql.42068.002632314800].[:Measure Names]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pit (scout)' name='mysql.42068.002632314800' />
+          </datasources>
+          <datasource-dependencies datasource='mysql.42068.002632314800'>
+            <column caption='Active Tote Intake' datatype='string' name='[active_tote_intake]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Deposit Totes Step' datatype='string' name='[deposit_totes_step]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Drivetrain Type' datatype='string' name='[drivetrain_type]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Intake Tote Feeder' datatype='string' name='[intake_tote_feeder]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Intake Tote Landfill' datatype='string' name='[intake_tote_landfill]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[active_tote_intake]' derivation='None' name='[none:active_tote_intake:nk]' pivot='key' type='nominal' />
+            <column-instance column='[deposit_totes_step]' derivation='None' name='[none:deposit_totes_step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[drivetrain_type]' derivation='None' name='[none:drivetrain_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[intake_tote_feeder]' derivation='None' name='[none:intake_tote_feeder:nk]' pivot='key' type='nominal' />
+            <column-instance column='[intake_tote_landfill]' derivation='None' name='[none:intake_tote_landfill:nk]' pivot='key' type='nominal' />
+            <column-instance column='[teamNumber]' derivation='None' name='[none:teamNumber:ok]' pivot='key' type='ordinal' />
+            <column caption='Team Number' datatype='integer' name='[teamNumber]' role='dimension' type='ordinal'>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([mysql.42068.002632314800].[none:teamNumber:ok] / ([mysql.42068.002632314800].[none:active_tote_intake:nk] / ([mysql.42068.002632314800].[none:deposit_totes_step:nk] / ([mysql.42068.002632314800].[none:drivetrain_type:nk] / ([mysql.42068.002632314800].[none:intake_tote_feeder:nk] / [mysql.42068.002632314800].[none:intake_tote_landfill:nk])))))</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pit (scout)' name='mysql.42068.002632314800' />
+          </datasources>
+          <datasource-dependencies datasource='mysql.42068.002632314800'>
+            <column caption='Internal Stacking' datatype='string' name='[internal_stacking]' role='dimension' type='nominal'>
+            </column>
+            <column caption='mani RC' datatype='string' name='[mani_RC]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Mani Totes' datatype='string' name='[mani_totes]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Mani Upside Down Totes' datatype='string' name='[mani_upside_down_totes]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[internal_stacking]' derivation='None' name='[none:internal_stacking:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mani_RC]' derivation='None' name='[none:mani_RC:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mani_totes]' derivation='None' name='[none:mani_totes:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mani_upside_down_totes]' derivation='None' name='[none:mani_upside_down_totes:nk]' pivot='key' type='nominal' />
+            <column-instance column='[pref_tote_getting]' derivation='None' name='[none:pref_tote_getting:nk]' pivot='key' type='nominal' />
+            <column-instance column='[teamNumber]' derivation='None' name='[none:teamNumber:ok]' pivot='key' type='ordinal' />
+            <column caption='Pref Tote Getting' datatype='string' name='[pref_tote_getting]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Team Number' datatype='integer' name='[teamNumber]' role='dimension' type='ordinal'>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([mysql.42068.002632314800].[none:teamNumber:ok] / ([mysql.42068.002632314800].[none:internal_stacking:nk] / ([mysql.42068.002632314800].[none:mani_RC:nk] / ([mysql.42068.002632314800].[none:mani_totes:nk] / ([mysql.42068.002632314800].[none:mani_upside_down_totes:nk] / [mysql.42068.002632314800].[none:pref_tote_getting:nk])))))</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pit (scout)' name='mysql.42068.002632314800' />
+          </datasources>
+          <datasource-dependencies datasource='mysql.42068.002632314800'>
+            <column-instance column='[push_litter_landfill]' derivation='None' name='[none:push_litter_landfill:nk]' pivot='key' type='nominal' />
+            <column-instance column='[right_sideways_RC]' derivation='None' name='[none:right_sideways_RC:nk]' pivot='key' type='nominal' />
+            <column-instance column='[score_sideways_RC]' derivation='None' name='[none:score_sideways_RC:nk]' pivot='key' type='nominal' />
+            <column-instance column='[stack_on_robot]' derivation='None' name='[none:stack_on_robot:nk]' pivot='key' type='nominal' />
+            <column-instance column='[teamNumber]' derivation='None' name='[none:teamNumber:ok]' pivot='key' type='ordinal' />
+            <column caption='Push Litter Landfill' datatype='string' name='[push_litter_landfill]' role='dimension' type='nominal'>
+            </column>
+            <column caption='right sideways RC' datatype='string' name='[right_sideways_RC]' role='dimension' type='nominal'>
+            </column>
+            <column caption='score sideways RC' datatype='string' name='[score_sideways_RC]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Stack On Robot' datatype='string' name='[stack_on_robot]' role='dimension' type='nominal'>
+            </column>
+            <column caption='Team Number' datatype='integer' name='[teamNumber]' role='dimension' type='ordinal'>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([mysql.42068.002632314800].[none:teamNumber:ok] / ([mysql.42068.002632314800].[none:push_litter_landfill:nk] / ([mysql.42068.002632314800].[none:right_sideways_RC:nk] / ([mysql.42068.002632314800].[none:score_sideways_RC:nk] / [mysql.42068.002632314800].[none:stack_on_robot:nk]))))</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[mysql.42068.002632314800].[none:acquire_RC_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_sideways_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_upside_down_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_RC_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_tote_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:deposit_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:drivetrain_type:nk]</field>
+          <field>[mysql.42068.002632314800].[none:teamNumber:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[mysql.42068.002632314800].[none:acquire_RC_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_sideways_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_upside_down_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_RC_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_tote_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:deposit_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:drive_ovver_platform:nk]</field>
+          <field>[mysql.42068.002632314800].[none:drivetrain_type:nk]</field>
+          <field>[mysql.42068.002632314800].[none:intake_tote_feeder:nk]</field>
+          <field>[mysql.42068.002632314800].[none:intake_tote_landfill:nk]</field>
+          <field>[mysql.42068.002632314800].[none:internal_stacking:nk]</field>
+          <field>[mysql.42068.002632314800].[none:teamNumber:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[mysql.42068.002632314800].[none:acquire_RC_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_sideways_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_upside_down_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_RC_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_tote_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:deposit_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:drive_ovver_platform:nk]</field>
+          <field>[mysql.42068.002632314800].[none:drivetrain_type:nk]</field>
+          <field>[mysql.42068.002632314800].[none:intake_tote_feeder:nk]</field>
+          <field>[mysql.42068.002632314800].[none:intake_tote_landfill:nk]</field>
+          <field>[mysql.42068.002632314800].[none:internal_stacking:nk]</field>
+          <field>[mysql.42068.002632314800].[none:mani_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:mani_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:mani_upside_down_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:pref_tote_getting:nk]</field>
+          <field>[mysql.42068.002632314800].[none:push_litter_landfill:nk]</field>
+          <field>[mysql.42068.002632314800].[none:teamNumber:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[mysql.42068.002632314800].[none:acquire_RC_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_sideways_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:acquire_upside_down_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_RC_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:active_tote_intake:nk]</field>
+          <field>[mysql.42068.002632314800].[none:deposit_totes_step:nk]</field>
+          <field>[mysql.42068.002632314800].[none:drive_ovver_platform:nk]</field>
+          <field>[mysql.42068.002632314800].[none:drivetrain_type:nk]</field>
+          <field>[mysql.42068.002632314800].[none:intake_tote_feeder:nk]</field>
+          <field>[mysql.42068.002632314800].[none:intake_tote_landfill:nk]</field>
+          <field>[mysql.42068.002632314800].[none:internal_stacking:nk]</field>
+          <field>[mysql.42068.002632314800].[none:mani_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:mani_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:mani_upside_down_totes:nk]</field>
+          <field>[mysql.42068.002632314800].[none:pref_tote_getting:nk]</field>
+          <field>[mysql.42068.002632314800].[none:push_litter_landfill:nk]</field>
+          <field>[mysql.42068.002632314800].[none:right_sideways_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:score_sideways_RC:nk]</field>
+          <field>[mysql.42068.002632314800].[none:stack_on_robot:nk]</field>
+          <field>[mysql.42068.002632314800].[none:teamNumber:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='104' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABoCAYAAACnk/+EAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAIMUlEQVR4nO3df0yU9wHH8ffNo/w42gkYWAVjqhaZ1W3q+EO7YafdCMEQ2fQ2uylBl2iT
+      uvkzFV1NilGaNZ0sYpSVSdWuRkK0sRoFgysk1W4OSQo1+AOjVdzU0fljDxzekWd/gIICSu5u
+      nPr9vP7Bi+fz/fI9Ps+P4z4+Dtu2bUQM9Y1QT0AklBQAMZoCIEZTAMRoCoAYTQEQoykAYjQF
+      QIymAIjRFAAxmgIgRlMAxGgKgBhNARCjKQBiNAVAjKYAiNEUADGaAiBGUwDEaAqAGE0BEKMp
+      AGI0BUCMpgCI0RQAMZoCIEZTAMRoCoAYTQEQoykAYjQFQIymAIjRFAAxmgIgRlMAxGgKgBhN
+      ARCjKQBiNAVAjKYAiNEUADGaAiBGUwDEaAqAGE0BEKMpAGI056Oe0NjYOBjzEAkJh23bdqgn
+      IRIqOgUSoykAYjQFQIymAIjRAg6Ap2k/brebHQ03gzEfkUFgUb54DiUNNwMJgI/munKWrt4V
+      vHmJDIoh0Nb5p0f+HqA/VsMHLCuoBIcjWLMyjIcTuwt5d99JAMb85A3W/joNGvez4eNrxF+r
+      4NhlB7Hjs3l7zVwS/H6lnk5WUzkr/vwM723MwoWHQ/lruOFeTxZV/ayfRU3JBooqz2FHRuJo
+      c5CJ0/8jQPjzP+CNvE28X+AO5vdljOaqQn6/9xarNpWyc+s64is281Z5I2Bx7mQlCXMLKd28
+      iqj6vXzSqNPLXtosWs7+Bx8AHVxruoTl89Hf+jUfeo/NFc+xbmsp2/J+QaRtAz7/A+CMSyFt
+      YiJOrzdI35FZrjTWEpX+GqmJLiLixjN3yWQu7fkbt7iDbWeSnZqIKyGVWZOjQEvcm/O+Lz30
+      vX5XztdD+kzGx7mIS/kxPxvRuax6FyhEfF5o7fHYGRYBUd2PO7q+xg6Lo30wJ/YkubdeQ3jm
+      gb/qtX5eoP3unsSJa2hnMBSAEBk+6kWoqKbJAjxXqdzxGVHTJ/NcqCf2pPABrRf5lwW+q3VU
+      t0LYQ54eP+pF+PQYFy3wtdRRVd9KWFgAF8HdOod9MIHycCOzVjDv1FrycjuvoewxMyn85Xg4
+      VwtR969meCgm+JhzpbzKzBFLyct1Y9uxjOhx9Oxr/UZmvcm8U79hVW41AJHAWPRhuJDzWRbt
+      Q8JxRehtHn94LAvCXQx0+TyWRUe4C1fX8xUAMZquAcRoCoAYTQEQoykAYjR1gsVoehdIjKZT
+      IDGaAiBGUwDEaArAU85jWXg8vlBP47EVQABaqCrJx+1243a7WV5YTrMneBOTh+nutD5M3Y7l
+      zM/NZd7qLcyZk0OdNTjjPkn8/gTW1ar3Ka5sIGlSJqnPnmZfdRlbkiaycfboYM5P+tTdae2f
+      hy+OXmLqsiKWpkbQUJ/OC67BGPfJ4ncAfM+NYdKk55m7MoeRzkZOfPoWX9+4Fcy5PdWC1WkF
+      aKnbz4aNu7jscBA5JpP8dT/nVOEiDrY5YNMSkn6Xx7ld1cz6dgocKOTjG9Fcq6jgssPBpOxV
+      rJybihMfDfuLyP/wGABjMpexNmcKLvofN7SC06n2+xQoMXU2q1fnMNLpo2bLn7jscJCSHO/v
+      5swTpE4rLcd5veBDUtcUUVZWysLEo6zM/ys/WpLPtEibqYsKmJUcxoVLjbR1AN6vqK24wryi
+      EjbnZVO7t4h6C1qOF/P2rmvkbf2Isp3vknj0D2w4dLH/cUMsWJ3qAK4BPFQV5uB2v8bh8Dl8
+      VFbG0rRE/zdnGicQdfcQ3LPS19lpzerqtC5IH0G7F66crodX0rs6rRnMnxCF1wvW9TPYdhJD
+      PeepqaklbMJCFvxwKDfDhxENRCcMu29/7bvTSlT6T5mY8E0SJmYxMy4OH/DPM/UQNwrP+RPU
+      /P0KExYuZoarjQv9jBtqX9XXQo9O9bzlL3Ppk+5O9YPr1x+/A9BctY3iY50nhBHtZ/igsJAd
+      NRf93Zx5glTpC382HofjMgz/DmlpacRcO8z27V/iHNBZSveePCZ+OLT8l/gJU0hLG8eNw9vY
+      WX+bpH7GDbVgVUr9PJnzUFv1GdD5fwI1VB+kAYiNeZWcNP+2aJpgVfqciRkU5J4nb1UupYBt
+      x7LgnbXEcbem2v0Sh3U9iuzjBzgx47csPv0mefO7Kpqxr7B+bSojXcl9jhtqwaqU6rNAIRZo
+      pe8enwervYNwlyugS1Sfx6K9YwguV8TAxg2xQCulCoAYTb8JFqMpAGI0BUCMpgCI0VSJFKPp
+      XSAxmk6BxGgKgBhNARCjKQBPOVUiHy6AAFjU9KhEvlNehxqRg0WVyGDxvxJZs5miygaSpmXz
+      3dvVHCwr4MDEUmaPDrh3J4+kSmSw+B2A6NGzWJQ7le9lpMHxrzl4shrvU7Y4/0+qRAYqxJVI
+      V2IKMzLSuL5jMa9vqsa2pzF9vPb+A6ZKZEAeg0pkp5jJOfwqcxIORzXF+5sC3Zw5gnSbT+v6
+      BQCu1h6mpKSck02tcPYIF4YMIxaITvhW70rkzLuVyOm8TCTQVYnEQ+2Bv1Cy5wjNrXD2yAku
+      9DNuqAXrNrN+H8tuNjfwjy9u8/2MKWSNH87nB2qp//xLPFmjiXj0PxfodZvPnq9Tn7f5pPdt
+      PnHewbaTGPtSMi6vl7DkJYy1wohxwh2gz731vYGiiYmLwkdXHTNuHC+NS8bbBslLXmAGiXBy
+      T9/jhpjPC609ql7+3mbW7yPAv49vp7h0E3/cXUXV7t2cczgYMSFZP/wDpU5wQELcCYbRs1aQ
+      fWo9+/YVd/aBJ7lZkZ3i7+aMo05wYB6bTrDHsuigd4dUBkad4MCoEywSAH0UQoz2P62FqDe0
+      Rf0JAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='104' name='Sheet 4' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='104' name='Sheet 5' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABoCAYAAACnk/+EAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAIEElEQVR4nO3df0zU5wHH8ffNo/w42gkYWAVjqhaZxW3i+EO7YaftCMEQ2fQ2uylBl2iT
+      uvkzFV1NqlGaNZ0sYpSVSdWuRkK0sRoFgysk1W4OSQo1+AOjVdzE0fljXzi8I9/9AU5UKOTu
+      xqnP5/UPueR4nifPl8/d9358+Dps27YRMdQ3Qr0AkVBSAMRoCoAYTQEQoykAYjQFQIymAIjR
+      FAAxmgIgRlMAxGgKgBhNARCjKQBiNAVAjKYAiNEUADGaAiBGUwDEaAqAGE0BEKMpAGI0BUCM
+      pgCI0RQAMZoCIEZTAMRoCoAYTQEQoykAYjQFQIymAIjRFAAxmgIgRlMAxGgKgBhNARCjKQBi
+      NAVAjKYAiNEUADGaAiBGUwDEaAqAGE0BEKMpAGI0BUCMpgCI0ZwD3aGpqWko1iESEg7btu1Q
+      L0IkVHQKJEZTAMRoCoAYTQEQowUcAE/zAdxuNzsbbwZjPSJDKoAA+Gipr2Dp6t3BW43IEBvw
+      c4D+WI3vs6ywChyOYK7HIB5O7ininf2nABj349dZ+6sMaDrAxo9aiW+t5PgVB7Gpuby1Zi4J
+      fh+pJ1Vw9s/vZ4DwZ3/A6wWbea/Q7e8QRmupLuJ3+26xanMZu7atI75yC29WNAEW509VkTC3
+      iLItq4hq2MfHTTq9fFCw9s/vADjjUsiYlIjT6/V3CKNdbaojKvNV0hNdRMSlMnfJZC7v/Su3
+      uINtZ5ObnogrIZ1Zk6NAW/yQYO2f3gUKEZ8X2nvddoZFQNS92109P2NHxNE5lAt7TARr/xSA
+      EBk55nmorKHZAjzXqNr5KVHTJ/NMqBf2mAjW/gXhpVUYAE8FPpBRRuesYN7ptRTkd7+GssfN
+      pOgXqXC+DqLu383wUCzwERes/dOX4ULMZ1l0DgvHFaG3efwR6P4pAGI0vQYQoykAYjQFQIym
+      AIjR1AkWo+ldIDGaToHEaAqAGE0BEKMpAE84j2Xh8fhCvYxHVgABaKO6dD1utxu3283yogpa
+      PMFbmHwdi4rFcygdoIddv3M58/Pzmbd6K3Pm5FFvDc28jxO/v4F1rfo9SqoaSUrLJv3pM+yv
+      KWdr0iQ2zR4bzPVJn4ZBx0D38fD5sctMXVbM0vQIGhsyec41FPM+XvwOgO+ZcaSlPcvclXmM
+      djZx8pM3+erGrWCu7YlmNVew4k9P8e6mHFx4OLx+DTfcG8ihup9Oq0Vt6UaKq85jR0bi6HCQ
+      3XP42uoPsHHTbq44HESOy2b9up9xumgRhzocsHkJSb8t4PzuGmZ9OwUOFvHRjWhaKyu54nCQ
+      lruKlXPTceKj8UAx6z84DsC47GWszZuCi/7nDa0Qd4IT02ezenUeo50+arf+kSsOBynJ8f4O
+      Z54Oi7Zz/6b77LyL1ubLWD4f/XVaWw6/y5bKZ1i3rYztBT8n0rYBH7Sd4LXCD0hfU0x5eRkL
+      E4+xcv1f+NGS9UyLtJm6qJBZyWFcvNxERxfg/ZK6yqvMKy5lS0EudfuKabCg7UQJb+1upWDb
+      h5TveofEY79n4+FL/c8bYiHvBIOH6qI83O5XORI+hw/Ly1makej/cKZxAlF3n4KH9SoUdXda
+      c3o6rQsyR9HphatnGuClTFLjXMSlZDF/YhReL1jXz2LbSQz3XKC2to6wiQtZ8MPh3AwfQTQQ
+      nTDivsdr3512ojJ/wqSEb5IwKYeZcXH4gH+cbYC4MXgunKT2b1eZuHAxM1wdXOxn3lD7sqEO
+      enWC5y1/kcsf3+sEP7h//fE7AC3V2yk53n1CGNF5lveLithZe8nf4czjA9ov8U8LfNfqqWm/
+      263rW/yY5+GT41yywNdWT3VDO2FhEP50PA7HFRj5HTIyMohpPcKOHV/gHNRZyr1H8pj4kdD2
+      H+InTiEjYwI3jmxnV8NtkvqZN9RCXIn0UFf9KdD9P4Eaaw7RCMTGvExehn8jmsaV8jIzRy2l
+      IN+Nbccyqlehu69K3+icN5h3+tesyq8BIBIYDzgTsyjMv0DBqnzKANuOZcHba4njbk313iEO
+      67kV2ccfcGLWb1h85g0K5vdUDGNfYsPadEa7kvucN9RUiXxCeCwLwl0MttHnsSy6wl24Hry/
+      z4PV2UW4yxXQS1Sfx6KzaxguV8Tg5g0xVSJFAqBPgsVoCoAYTQEQoykAYjRVIsVoehdIjKZT
+      IDGaAiBGUwDEaArAE06VyK8XQAAsantVIt+uqEeNyKGiSmSw+F+JrN1CcVUjSdNy+e7tGg6V
+      F3JwUhmzxwbcu5MBqRIZLH4HIHrsLBblT+V7WRlw4isOnarB+4Rtzv+TKpGBCnEl0pWYwoys
+      DK7vXMxrm2uw7WlMT9Wj/6CpEhmQR6AS2S1mch6/zE7D4aih5EBzoMOZw3nfj176vszn1QsN
+      kDmzp5r4Cj8d1X31T+v6RQCu1R2htLSCU83tcO4oF4eNIBaITvjWw5XImXcrkdN5kUigpxKJ
+      h7qDf6Z071Fa2uHc0ZNc7GfeUAvWZVL9fi672dLI3z+/zfezppCTOpLPDtbR8NkXeHLGEjHw
+      rwv0uqxndye493F66DKfXnrdw4lreM+Bdd7BtpMY/0IyLq+XsOQljLfCiHHCHaDPR+v/TRRN
+      TFwUPnrqmHETeGFCMt4OSF7yHDNIhFN7+543xHxeaO9V9Rryy6T+68QOSso284c91VTv2cN5
+      h4NRE5P1xz9Y6gQHJOSXSR07awW5pzewf39Jdx84zc2K3BR/hzOOOsGBeWQ6wR7LoouHO6Qy
+      OOoEB0adYJEA6KsQYrT/AoZ9gf1FAFtGAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='104' name='Sheet 6' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

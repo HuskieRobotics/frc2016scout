@@ -95,7 +95,7 @@ CREATE TABLE pit
   right_sideways_RC TEXT NOT NULL,
   stack_on_robot TEXT NOT NULL,
   internal_stacking TEXT NOT NULL,
-  drive_ovver_platform TEXT NOT NULL,
+  drive_over_platform TEXT NOT NULL,
   acquire_RC_step TEXT NOT NULL,
   max_tote_height INT NOT NULL,
   max_RC_height INT NOT NULL
@@ -189,7 +189,7 @@ var PIT_COLUMNS = [
   'right_sideways_RC',
   'stack_on_robot',
   'internal_stacking',
-  'drive_ovver_platform',
+  'drive_over_platform',
   'acquire_RC_step',
   'max_tote_height',
   'max_RC_height'
@@ -203,7 +203,7 @@ var connection = mysql.createConnection({
   database : 'scout'
 });
 
-// connection.connect();
+connection.connect();
 
 // var createTable = 'CREATE TABLE scouting( ';
 
@@ -286,14 +286,10 @@ router.post('/save_match', function(req, res, next) {
 
   console.log("HERE IS THE QUERY");
   console.log(query);
-  connection.connect();
-
 
   connection.query(query, function(err, rows, fields){
     if (err) console.log(err);
   });
-
-  connection.end();
 
 });
 
@@ -314,7 +310,8 @@ router.post('/save_pit', function(req, res, next){
         query += PIT_COLUMNS[i];
     }
   }  
-  
+  console.log("1");
+
   query += ") VALUES (";
 
   for (i = 0; i<PIT_COLUMNS.length; i++)
@@ -328,6 +325,7 @@ router.post('/save_pit', function(req, res, next){
         query += "'" + req.body[PIT_COLUMNS[i]] + "'";
     }
   }
+  console.log("2");
 
   query += ");";  
   // var query = "INSERT INTO scouting";
@@ -340,17 +338,11 @@ router.post('/save_pit', function(req, res, next){
   // query += req.body.platform + "', '" + req.body.teamNumber + "');";
   console.log("HERE IS THE QUERY");
   console.log(query);
-  
-  connection.connect();
-
 
   connection.query(query, function(err, rows, fields){
     if (err) console.log(err);
   });
 
-  connection.end();
 });
-
-// connection.end();
 
 module.exports = router;
