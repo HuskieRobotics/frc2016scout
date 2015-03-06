@@ -105,7 +105,6 @@ CREATE TABLE pit
 var MATCH_COLUMNS = [
   'teamNumber',
   'matchNumber',
-  'auto_starting_config',
   'RC_stage_to_auto',
   'RC_from_step',
   'RC_step_to_auto',
