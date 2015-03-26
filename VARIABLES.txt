@@ -1,0 +1,10 @@
+pit scouting
+teamNumber
+mani_RC
+mani_totes
+push_litter_landfill
+intake_tote_landfill
+intake_tote_feeder
+active_RC_intake
+drivetrain_type
+pref_tote_getting

@@ -51,9 +51,9 @@ html(lang='en')
             div.row
               div.col-xs-6
                 h3 Autonomous
-                .form-group
-                  label Starting position
-                    input.form-control(type="number", placeholder="use map", name="auto_starting_config", value=0)
+                //- .form-group
+                //-   label Starting position
+                //-     input.form-control(type="number", placeholder="use map", name="auto_starting_config", value=0)
                 .form-group
                   label Number of RC's moved from stage to auto zone
                     input.form-control(type="number", placeholder="0", name="RC_stage_to_auto", value=0)
@@ -70,14 +70,14 @@ html(lang='en')
                   label
                     input(type='checkbox', name='totes_auto_stacked')
                     | Were they stacked?
-                .checkbox
-                  label
-                    input(type="checkbox", name="req_others_move_RC")
-                    | Required other robots to move RC's out of the way?
-                .checkbox
-                  label
-                    input(type='checkbox', name='req_knock_over_RC')
-                    | Required knocking over RC's
+                //- .checkbox
+                //-   label
+                //-     input(type="checkbox", name="req_others_move_RC")
+                //-     | Required other robots to move RC's out of the way?
+                //- .checkbox
+                //-   label
+                //-     input(type='checkbox', name='req_knock_over_RC')
+                //-     | Required knocking over RC's
                 .checkbox 
                   label
                     input(type="checkbox", name="fully_moves_to_auto")
@@ -93,9 +93,9 @@ html(lang='en')
                 .form-group
                   label Number of RC's acquired from step
                     input.form-control(type="number", name="num_RC_from_step", value=0)
-                .form-group
-                  label Number of fouls called against
-                    input.form-control(type="number", name="num_fouls_called", value=0)
+                //- .form-group
+                //-   label Number of fouls called against
+                //-     input.form-control(type="number", name="num_fouls_called", value=0)
                 .checkbox
                   label
                     input(type="checkbox", name="robot_tipped")
@@ -104,12 +104,12 @@ html(lang='en')
                 button.btn.btn-sm.btn-info(type="button", data-toggle="popover",title="Unprocessed vs. Processed",
                   data-content="Unprocessed is the litter you throw onto the opposite alliance that goes past their landfill. Processed is the litter the other team throws into the zone past our landfill that we move into the landfill") Unprocessed vs. Processed
                 
-                .form-group
-                  label Unprocessed Litter
-                    input.form-control(type="number", name="unprocessed_litter", value=0)
-                .form-group
-                  label Processed Litter
-                    input.form-control(type="number", name="processed_litter", value=0)
+                //- .form-group
+                //-   label Unprocessed Litter
+                //-     input.form-control(type="number", name="unprocessed_litter", value=0)
+                //- .form-group
+                //-   label Processed Litter
+                //-     input.form-control(type="number", name="processed_litter", value=0)
             .text-center
               h3 Stack Information
             .row
