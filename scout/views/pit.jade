@@ -44,18 +44,9 @@ html(lang='en')
             .form-group
               label Team Number
                 input.form-control(type="number", placeholder="3061", name="teamNumber", value=0)
-            .checkbox
-              label
-                input(type="checkbox", name="mani_RC")
-                |  Can manipulate upside RC's?
-            .checkbox
-              label
-                input(type="checkbox", name="mani_totes")
-                |  Can manipulate upside totes's?
-            .checkbox
-              label
-                input(type="checkbox", name="push_litter_landfill")
-                |  Can push litter into landfill?
+            .form-group
+              label Drivetrain type
+                input.form-control(type="text", placeholder="mec, tank, h, 2+2, etc.", name="drivetrain_type")
             .checkbox
               label
                 input(type="checkbox", name="intake_tote_landfill")
@@ -64,17 +55,30 @@ html(lang='en')
               label
                 input(type="checkbox", name="intake_tote_feeder")
                 |  Can intake totes from human feeder station?
-            .checkbox
-              label
-                input(type="checkbox", name="active_tote_intake")
-                |  Active intake for totes?
-            .checkbox
-              label
-                input(type="checkbox", name="active_RC_intake")
-                |  Active intake for RC's?
-            .form-group
-              label Drivetrain type
-                input.form-control(type="text", placeholder="mec, tank, h, 2+2, etc.", name="drivetrain_type")
+
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="mani_RC")
+            //-     |  Can manipulate upside RC's?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="mani_totes")
+            //-     |  Can manipulate upside totes's?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="push_litter_landfill")
+            //-     |  Can push litter into landfill?
+            
+            
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="active_tote_intake")
+            //-     |  Active intake for totes?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="active_RC_intake")
+            //-     |  Active intake for RC's?
+            
             .form-group
               label Preferred way to get totes 
               .radio
@@ -93,46 +97,46 @@ html(lang='en')
               label
                 input(type="checkbox", name="deposit_totes_step")
                 |  Able to deposit totes on step?
-            .checkbox
-              label
-                input(type="checkbox", name="acquire_totes_step")
-                |  Able to acquire totes on step?
-            .checkbox
-              label
-                input(type="checkbox", name="acquire_upside_down_totes")
-                |  Able to acquire upside down totes?
-            .checkbox
-              label
-                input(type="checkbox", name="mani_upside_down_totes")
-                |  Able to manipulate upside down totes?
-            .checkbox
-              label
-                input(type="checkbox", name="acquire_sideways_RC")
-                |  Able to acquire sideways RC's?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="acquire_totes_step")
+            //-     |  Able to acquire totes on step?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="acquire_upside_down_totes")
+            //-     |  Able to acquire upside down totes?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="mani_upside_down_totes")
+            //-     |  Able to manipulate upside down totes?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="acquire_sideways_RC")
+            //-     |  Able to acquire sideways RC's?
             .checkbox
               label
                 input(type="checkbox", name="score_sideways_RC")
                 |  Able to score sideways RC's?
-            .checkbox
-              label
-                input(type="checkbox", name="right_sideways_RC")
-                |  Able to right a sideways RC?
-            .checkbox
-              label
-                input(type="checkbox", name="stack_on_robot")
-                |  Able to stack on robot?
-            .checkbox
-              label
-                input(type="checkbox", name="internal_stacking")
-                |  Internal stacking?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="right_sideways_RC")
+            //-     |  Able to right a sideways RC?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="stack_on_robot")
+            //-     |  Able to stack on robot?
+            //- .checkbox
+            //-   label
+            //-     input(type="checkbox", name="internal_stacking")
+            //-     |  Internal stacking?
             .checkbox
               label
                 input(type="checkbox", name="drive_over_platform")
                 |  Able to drive over platform?]
-            .checkbox
-              label
-                input(type='checkbox', name='acquire_RC_step')
-                | Able to acquire RC's from step?
+            //- .checkbox
+            //-   label
+            //-     input(type='checkbox', name='acquire_RC_step')
+            //-     | Able to acquire RC's from step?
             .form-group
               label Max height for tote stack
                 input.form-control(type='number', placeholder='0-6', name='max_tote_height', value=0)
