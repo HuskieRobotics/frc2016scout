@@ -171,28 +171,35 @@ var MATCH_COLUMNS = [
 var PIT_COLUMNS = [
   'teamNumber',
   'scout_name',
-  'mani_RC',
-  'mani_totes',
-  'push_litter_landfill',
+  'drivetrain_type',
   'intake_tote_landfill',
   'intake_tote_feeder',
-  'active_tote_intake',
-  'active_RC_intake',
-  'drivetrain_type',
   'pref_tote_getting',
   'deposit_totes_step',
-  'acquire_totes_step',
-  'acquire_upside_down_totes',
-  'mani_upside_down_totes',
-  'acquire_sideways_RC',
-  'score_sideways_RC',
-  'right_sideways_RC',
-  'stack_on_robot',
-  'internal_stacking',
-  'drive_over_platform',
-  'acquire_RC_step',
   'max_tote_height',
-  'max_RC_height'
+  'max_RC_height',
+  'noodle_rc',
+  'score_sideways_RC',
+  'drive_over_platform',
+  'acquire_RC_step'
+
+
+
+  
+
+  // 'mani_RC',
+  // 'mani_totes',
+  // 'push_litter_landfill',
+
+  // 'active_tote_intake',
+  // 'active_RC_intake',
+  // 'acquire_totes_step',
+  // 'acquire_upside_down_totes',
+  // 'mani_upside_down_totes',
+  // 'acquire_sideways_RC',
+  // 'right_sideways_RC',
+  // 'stack_on_robot',
+  // 'internal_stacking',
 ];
 
 

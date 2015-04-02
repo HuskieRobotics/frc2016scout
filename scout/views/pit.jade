@@ -58,7 +58,47 @@ html(lang='en')
               label
                 input(type="checkbox", name="intake_tote_feeder")
                 |  Can intake totes from human feeder station?
-
+            .form-group
+              label Preferred way to get totes 
+              .radio
+                label
+                  input#optionsRadios1(type='radio', name='pref_tote_getting', value='landfill')
+                  |     Landfill
+              .radio
+                label
+                  input#optionsRadios2(type='radio', name='pref_tote_getting', value='feeder')
+                  |     Feeder
+              .radio
+                label
+                  input(type='radio', name="pref_tote_getting", value='na', checked='')
+                  | N/A
+            .checkbox
+              label
+                input(type="checkbox", name="deposit_totes_step")
+                |  Able to deposit totes on step?
+            .form-group
+              label Max height for tote stack
+                input.form-control(type='number', placeholder='0-6', name='max_tote_height', value=0)
+            .form-group
+              label Max height for RC placement
+                input.form-control(type='number', placeholder='0-6', name='max_RC_height', value=0)
+            .checkbox
+              label
+                input(type="checkbox", name="noodle_rc")
+                  |  Can noodle RC?
+            .checkbox
+              label
+                input(type="checkbox", name="score_sideways_RC")
+                |  Able to score sideways RC's?
+            .checkbox
+              label
+                input(type="checkbox", name="drive_over_platform")
+                |  Able to drive over platform?
+            .checkbox
+              label
+                input(type='checkbox', name='acquire_RC_step')
+                | Able to acquire RC's from step?
+                
             //- .checkbox
             //-   label
             //-     input(type="checkbox", name="mani_RC")
@@ -82,24 +122,8 @@ html(lang='en')
             //-     input(type="checkbox", name="active_RC_intake")
             //-     |  Active intake for RC's?
             
-            .form-group
-              label Preferred way to get totes 
-              .radio
-                label
-                  input#optionsRadios1(type='radio', name='pref_tote_getting', value='landfill')
-                  |     Landfill
-              .radio
-                label
-                  input#optionsRadios2(type='radio', name='pref_tote_getting', value='feeder')
-                  |     Feeder
-              .radio
-                label
-                  input(type='radio', name="pref_tote_getting", value='na', checked='')
-                  | N/A
-            .checkbox
-              label
-                input(type="checkbox", name="deposit_totes_step")
-                |  Able to deposit totes on step?
+            
+
             //- .checkbox
             //-   label
             //-     input(type="checkbox", name="acquire_totes_step")
@@ -116,10 +140,7 @@ html(lang='en')
             //-   label
             //-     input(type="checkbox", name="acquire_sideways_RC")
             //-     |  Able to acquire sideways RC's?
-            .checkbox
-              label
-                input(type="checkbox", name="score_sideways_RC")
-                |  Able to score sideways RC's?
+            
             //- .checkbox
             //-   label
             //-     input(type="checkbox", name="right_sideways_RC")
@@ -132,20 +153,10 @@ html(lang='en')
             //-   label
             //-     input(type="checkbox", name="internal_stacking")
             //-     |  Internal stacking?
-            .checkbox
-              label
-                input(type="checkbox", name="drive_over_platform")
-                |  Able to drive over platform?]
-            //- .checkbox
-            //-   label
-            //-     input(type='checkbox', name='acquire_RC_step')
-            //-     | Able to acquire RC's from step?
-            .form-group
-              label Max height for tote stack
-                input.form-control(type='number', placeholder='0-6', name='max_tote_height', value=0)
-            .form-group
-              label Max height for RC placement
-                input.form-control(type='number', placeholder='0-6', name='max_RC_height', value=0)
+            
+
+            
+            
             br
             .text-center
               button.btn.btn-success.btn-lg#pit_submit Submit
