@@ -42,12 +42,19 @@ html(lang='en')
         form#match_form
           fieldset
             legend Match Scouting
-            .form-group
-              label Team Number
-                input.form-control(type="number", placeholder="3061", name="teamNumber", value=0)
-            .form-group
-              label Match Number
-                input.form-control(type="number", placeholder="1", name="matchNumber", value=0)
+            div.row
+              div.col-xs-4
+                .form-group
+                  label Team Number
+                    input.form-control(type="number", placeholder="3061", name="teamNumber", value=0)
+              div.col-xs-4
+                .form-group
+                  label Match Number
+                    input.form-control(type="number", placeholder="1", name="matchNumber", value=0)
+              div.col-xs-4
+                .form-group
+                  label Your name
+                    input.form-control(type="text", placeholder="your name", name="scout_name")
             div.row
               div.col-xs-6
                 h3 Autonomous
