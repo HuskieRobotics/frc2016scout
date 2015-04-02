@@ -170,6 +170,7 @@ var MATCH_COLUMNS = [
 
 var PIT_COLUMNS = [
   'teamNumber',
+  'scout_name',
   'mani_RC',
   'mani_totes',
   'push_litter_landfill',
@@ -203,27 +204,6 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
-
-// var createTable = 'CREATE TABLE scouting( ';
-
-// columns.forEach(function(e){
-//   createTable += e + ' TEXT NOT NULL, ';
-// });
-
-// createTable += ');';
-
-// var createDB = 'CREATE DATABASE scout';
-
-// connection.query(, function(err, rows, fields){
-//   if (err) throw err;
-// });
-
-
-// connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-//   if (err) throw err;
-
-//   console.log('The solution is: ', rows[0].solution);
-// });
 
 
 /* GET home page. */
@@ -273,15 +253,6 @@ router.post('/save_match', function(req, res, next) {
   console.log("2");
   query += ");";  
 
-  // var query = "INSERT INTO scouting";
-  // query += " (config, bins_auto, totes_auto, noodles_auto, bins, auto, recyclingBins, totes, noodles,";
-  // query += " coop, cGround, cHuman, collect, pickup, stacksKnocked, maxCrates, platform, teamNumber) VALUES ('";
-  // query += req.body.config + "', '" + req.body.bins_auto + "', '" + req.body.totes_auto + "', '" + req.body.noodles_auto + "', '";
-  // query += req.body.bins + "', '" + req.body.auto + "', '" + req.body.recylingBins + "', '" + req.body.totes + "', '";
-  // query += req.body.noodles + "', '" + req.body.coop + "', '" + req.body.cGround + "', '" + req.body.cHuman + "', '";
-  // query += req.body.collect + "', '" + req.body.pickup + "', '" + req.body.stacksKnocked + "', '" + req.body.maxCrates + "', '";
-  // query += req.body.platform + "', '" + req.body.teamNumber + "');";
-  
 
   console.log("HERE IS THE QUERY");
   console.log(query);
@@ -327,14 +298,7 @@ router.post('/save_pit', function(req, res, next){
   console.log("2");
 
   query += ");";  
-  // var query = "INSERT INTO scouting";
-  // query += " (config, bins_auto, totes_auto, noodles_auto, bins, auto, recyclingBins, totes, noodles,";
-  // query += " coop, cGround, cHuman, collect, pickup, stacksKnocked, maxCrates, platform, teamNumber) VALUES ('";
-  // query += req.body.config + "', '" + req.body.bins_auto + "', '" + req.body.totes_auto + "', '" + req.body.noodles_auto + "', '";
-  // query += req.body.bins + "', '" + req.body.auto + "', '" + req.body.recylingBins + "', '" + req.body.totes + "', '";
-  // query += req.body.noodles + "', '" + req.body.coop + "', '" + req.body.cGround + "', '" + req.body.cHuman + "', '";
-  // query += req.body.collect + "', '" + req.body.pickup + "', '" + req.body.stacksKnocked + "', '" + req.body.maxCrates + "', '";
-  // query += req.body.platform + "', '" + req.body.teamNumber + "');";
+
   console.log("HERE IS THE QUERY");
   console.log(query);
 
