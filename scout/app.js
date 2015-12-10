@@ -78,4 +78,4 @@ app.get('/', function(req, res, next){
 //     console.log('Scouting app listening at http://%s:%s', host, port)
 // });
 
-// module.exports = app;
+module.exports = app;
