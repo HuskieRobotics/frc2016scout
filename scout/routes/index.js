@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 
@@ -158,10 +160,6 @@ var PIT_COLUMNS = [
   'drive_over_platform',
   'acquire_RC_step'
 
-
-
-  
-
   // 'mani_RC',
   // 'mani_totes',
   // 'push_litter_landfill',
@@ -177,117 +175,93 @@ var PIT_COLUMNS = [
   // 'internal_stacking',
 ];
 
-
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'scout'
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'scout'
 });
 
 connection.connect();
 
-
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Scouting' });
 });
 
-router.get('/pit', function(req, res, next) {
+router.get('/pit', function (req, res, next) {
   res.render('pit');
 });
 
-router.get('/match', function(req, res, next) {
+router.get('/match', function (req, res, next) {
   res.render('match');
 });
 
-router.post('/save_match', function(req, res, next) {
-	console.log('/save_match');
-	console.log(req.body);
+router.post('/save_match', function (req, res, next) {
+  console.log('/save_match');
+  console.log(req.body);
 
-  var query = "INSERT INTO matches(";
+  var query = 'INSERT INTO matches(';
 
-  for (i = 0; i<MATCH_COLUMNS.length; i++)
-  {
-    if (i < (MATCH_COLUMNS.length-1))
-    {
-        query += MATCH_COLUMNS[i] + ", ";
-    }
-    else
-    {
-        query += MATCH_COLUMNS[i];
-    }
-  }  
-  console.log("1");
-  query += ") VALUES (";
-
-  for (i = 0; i<MATCH_COLUMNS.length; i++)
-  {
-    if (i < (MATCH_COLUMNS.length-1))
-    {
-        query += "'" + req.body[MATCH_COLUMNS[i]] + "', ";
-    }
-    else
-    {
-        query += "'" + req.body[MATCH_COLUMNS[i]] + "'";
+  for (let i = 0; i < MATCH_COLUMNS.length; i++) {
+    if (i < (MATCH_COLUMNS.length - 1)) {
+      query += MATCH_COLUMNS[i] + ', ';
+    } else {
+      query += MATCH_COLUMNS[i];
     }
   }
-  console.log("2");
-  query += ");";  
+  console.log('1');
+  query += ') VALUES (';
 
+  for (let i = 0; i < MATCH_COLUMNS.length; i++) {
+    if (i < (MATCH_COLUMNS.length - 1)) {
+      query += '\'' + req.body[MATCH_COLUMNS[i]] + '\', ';
+    } else {
+      query += '\'' + req.body[MATCH_COLUMNS[i]] + '\'';
+    }
+  }
+  console.log('2');
+  query += ');';
 
-  console.log("HERE IS THE QUERY");
+  console.log('HERE IS THE QUERY');
   console.log(query);
 
-  connection.query(query, function(err, rows, fields){
-    if (err) console.log(err);
+  connection.query(query, function (err, rows, fields) {
+    if (err) {
+      console.log(err);
+    }
   });
-
 });
 
-router.post('/save_pit', function(req, res, next){
+router.post('/save_pit', function (req, res, next) {
   console.log('/save_pit');
   console.log(req.body);
 
-  var query = "INSERT INTO pit(";
+  var query = 'INSERT INTO pit(' + PIT_COLUMNS.join(', ') + ') ';
 
-  for (i = 0; i<PIT_COLUMNS.length; i++)
-  {
-    if (i < (PIT_COLUMNS.length-1))
-    {
-        query += PIT_COLUMNS[i] + ", ";
-    }
-    else
-    {
-        query += PIT_COLUMNS[i];
-    }
-  }  
-  console.log("1");
+  console.log('1');
 
-  query += ") VALUES (";
+  query += 'VALUES (';
 
-  for (i = 0; i<PIT_COLUMNS.length; i++)
-  {
-    if (i < (PIT_COLUMNS.length-1))
-    {
-        query += "'" + req.body[PIT_COLUMNS[i]] + "', ";
-    }
-    else
-    {
-        query += "'" + req.body[PIT_COLUMNS[i]] + "'";
+  for (var i = 0; i < PIT_COLUMNS.length; i++) {
+    if (i < (PIT_COLUMNS.length - 1)) {
+      query += '\'' + req.body[PIT_COLUMNS[i]] + '\', ';
+    } else {
+      query += '\'' + req.body[PIT_COLUMNS[i]] + '\'';
     }
   }
-  console.log("2");
+  console.log('2');
 
-  query += ");";  
+  query += ');';
 
-  console.log("HERE IS THE QUERY");
+  console.log('HERE IS THE QUERY');
   console.log(query);
 
-  connection.query(query, function(err, rows, fields){
-    if (err) console.log(err);
+  connection.query(query, function (err, rows, fields) {
+    if (err) {
+      console.log(err);
+    }
   });
-
 });
 
 module.exports = router;

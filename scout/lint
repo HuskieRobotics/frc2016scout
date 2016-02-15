@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+semistandard --verbose | grep -v jquery | grep -v bootstrap | snazzy
+
