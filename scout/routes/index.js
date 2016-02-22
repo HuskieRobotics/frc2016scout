@@ -1,11 +1,11 @@
-'use strict';
+ 'use strict';
 
 var express = require('express');
 var router = express.Router();
 
 var mysql = require('mysql');
 
-/**
+/*
 CREATE TABLE matches
 (
 teamNumber INT NOT NULL,

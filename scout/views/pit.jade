@@ -40,65 +40,136 @@ html(lang='en')
 
         form#pit_form
           fieldset
-            legend Pit Scouting
+            legend General Information
             .form-group
               label Team Number
-                input.form-control(type="number", placeholder="3061", name="teamNumber", value=0)
+                input.form-control(type="number", placeholder="3061", name="pitTeamNumber", value=0)
             .form-group
               label Your name
-                input.form-control(type="text", placeholder="your name", name="scout_name")
+                input.form-control(type="text", placeholder="your name", name="pitScoutName")
             .form-group
               label Drivetrain type
-                input.form-control(type="text", placeholder="mec, tank, h, 2+2, etc.", name="drivetrain_type")
-            .checkbox
-              label
-                input(type="checkbox", name="intake_tote_landfill")
-                |  Can intake totes from landfill?
-            .checkbox
-              label
-                input(type="checkbox", name="intake_tote_feeder")
-                |  Can intake totes from human feeder station?
+                input.form-control(type="text", placeholder="mec, tank, h, 2+2, etc.", name="drivetrainType")
             .form-group
-              label Preferred way to get totes 
+              label
+                input(type="checkbox", name="overlyFragile")
+                |  Is the robot overly fragile?
+            .form-group
+              label
+                textarea(rows="3", columns="100", name="fragileComments", placeholder="Comments")
+            legend Match Information
+            .form-group
+              div.col-xs-6
+                label Can shoot at high goal?
+                .radio
+                  label
+                    input#optionsRadios1(type='radio', name='pitHighGoal', value='yes')
+                    |     Yes
+                .radio
+                  label
+                    input#optionsRadios2(type='radio', name='pitHighGoal', value='no')
+                    |     No
+                .radio
+                  label
+                    input#optionsRadios3(type='radio', name="pitHighGoal", value='possibly')
+                    | Possibly
+              div.col-xs-6
+                label Can shoot at low goal?
+                .radio
+                  label
+                    input#optionsRadios1(type='radio', name='pitLowGoal', value='yes')
+                    |     Yes
+                .radio
+                  label
+                    input#optionsRadios2(type='radio', name='pitLowGoal', value='no')
+                    |     No
+                .radio
+                  label
+                    input#optionsRadios3(type='radio', name="pitLowGoal", value='possibly')
+                    | Possibly
+            .form-group
+              label How does the robot gather boulders?
               .radio
                 label
-                  input#optionsRadios1(type='radio', name='pref_tote_getting', value='landfill')
-                  |     Landfill
+                  input#optionsRadios1(type='radio', name='boulderGathering', value='ground')
+                  | Ground
               .radio
                 label
-                  input#optionsRadios2(type='radio', name='pref_tote_getting', value='feeder')
-                  |     Feeder
+                  input#optionsRadios2(type='radio', name='boulderGathering', value='humanPlayer')
+                  | Human player
               .radio
                 label
-                  input(type='radio', name="pref_tote_getting", value='na', checked='')
-                  | N/A
-            .checkbox
-              label
-                input(type="checkbox", name="deposit_totes_step")
-                |  Able to deposit totes on step?
+                  input#optionsRadios3(type='radio', name="boulderGathering", value='cannotCollect')
+                  | Cannot collect
+              .radio
+                label
+                  input#optionsRadios4(type="radio", name="boulderGathering", value="other")
+                  | Other:
+              input(type = "text", placeholder = "Other Method")
             .form-group
-              label Max height for tote stack
-                input.form-control(type='number', placeholder='0-6', name='max_tote_height', value=0)
+              input(type="checkbox", name="canClimb")
+              | Can the robot climb the tower?
             .form-group
-              label Max height for RC placement
-                input.form-control(type='number', placeholder='0-6', name='max_RC_height', value=0)
-            .checkbox
+              .col-xs-12
+                div.col-xs-12
+                  h4 Which defenses can likely be breached?
+                div.col-xs-2
+                  h4 Category A
+                div.col-xs-2
+                  h4 Category B
+                div.col-xs-2
+                  h4 Category C
+                div.col-xs-2
+                  h4 Category D
+                div.col-xs-2
+                  h4 Category E
+                div.col-xs-2
+              .col-xs-12
+                div.col-xs-2
+                  input(type="checkbox", name="pitPortcullis")
+                  | Porticullis
+                div.col-xs-2
+                  input(type="checkbox", name="pitMoat")
+                  | Moat
+                div.col-xs-2
+                  input(type="checkbox", name="pitDrawbridge")
+                  | Drawbridge
+                  br
+                div.col-xs-2
+                  input(type="checkbox", name="pitRockWall")
+                  | Rock Wall
+                div.col-xs-2
+                  input(type="checkbox", name="pitLowBar")
+                  | Low Bar
+              .col-xs-12
+                div.col-xs-2
+                  input(type="checkbox", name="pitChevalDeFrise")
+                  | Cheval de Frise
+                div.col-xs-2
+                  input(type="checkbox", name="pitRamparts")
+                  | Ramparts
+                div.col-xs-2
+                  input(type="checkbox", name="pitSallyPort")
+                  | Sally Port
+                div.col-xs-2
+                  input(type="checkbox", name="pitRoughTerrain")
+                  | Rough Terrain
+            .form-group
+              .col-xs-12
+                div.col-xs-12
+                  h3
+              legend Miscellaneous Information
+            .form-group
               label
-                input(type="checkbox", name="noodle_rc")
-                |  Can noodle RC?
-            .checkbox
+                input(type="checkbox", name="communicationIssues")
+                | Do they have communcation issues?
+            .form-group
               label
-                input(type="checkbox", name="score_sideways_RC")
-                |  Able to score sideways RC's?
-            .checkbox
-              label
-                input(type="checkbox", name="drive_over_platform")
-                |  Able to drive over platform?
-            .checkbox
-              label
-                input(type='checkbox', name='acquire_RC_step')
-                | Able to acquire RC's from step?
-                
+                input(type="checkbox", name="counterstrategy")
+                | Do we need to develop a counter strategy?
+            .form-group
+              textarea(rows="3", columns="200", name="communicationComments", placeholder="Communication Comments")
+
             //- .checkbox
             //-   label
             //-     input(type="checkbox", name="mani_RC")
@@ -111,8 +182,8 @@ html(lang='en')
             //-   label
             //-     input(type="checkbox", name="push_litter_landfill")
             //-     |  Can push litter into landfill?
-            
-            
+
+
             //- .checkbox
             //-   label
             //-     input(type="checkbox", name="active_tote_intake")
@@ -121,8 +192,8 @@ html(lang='en')
             //-   label
             //-     input(type="checkbox", name="active_RC_intake")
             //-     |  Active intake for RC's?
-            
-            
+
+
 
             //- .checkbox
             //-   label
@@ -140,7 +211,7 @@ html(lang='en')
             //-   label
             //-     input(type="checkbox", name="acquire_sideways_RC")
             //-     |  Able to acquire sideways RC's?
-            
+
             //- .checkbox
             //-   label
             //-     input(type="checkbox", name="right_sideways_RC")
@@ -153,15 +224,15 @@ html(lang='en')
             //-   label
             //-     input(type="checkbox", name="internal_stacking")
             //-     |  Internal stacking?
-            
 
-            
-            
+
+
+
             br
             .text-center
               button.btn.btn-success.btn-lg#pit_submit Submit
 
-        
+
         //- form.form-horizontal
         //-   fieldset
         //-     legend Controls Bootstrap supports
@@ -201,12 +272,12 @@ html(lang='en')
         //-     div.control-group
         //-       label.control-label(for="textarea") Textarea
         //-       div.controls
-        //-         textarea.input-xlarge#textarea(rows="3") 
+        //-         textarea.input-xlarge#textarea(rows="3")
         //-     div.form-actions
         //-       button.btn.btn-primary(type="submit") Save changes
         //-       button.btn Cancel
     // /container
-    
+
     // Bootstrap core JavaScript
     // ==================================================
     // Placed at the end of the document so the pages load faster

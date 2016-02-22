@@ -36,290 +36,188 @@ html(lang='en')
     .container
       // Main component for a primary marketing message or call to action
       .jumbotron
+        .col.xs-12
+          div.col-xs-12
+            center
+              h1 Match Scouting
+              br
 
-        h1 Match Scouting
+          legend Team Stuff
+          div.col-xs-4
+            label Team Number
+              input.form-control(type="number", placeholder="Team Number Here", name="teamNumber", value=0)
+          div.col-xs-4
+            label Match Number
+              input.form-control(type="number", placeholder="Match Number Here", name="matchNumber", value=0)
+              br
+          div.col-xs-4
+            label Scout Name
+              input.form-control(type="string", placeholder="Your Name Here", name = "scoutName", value="")
+
+          //Creating Defenses Breached Stuff
+          legend Autonomous
+        .col-xs-12
+          div.col-xs-12
+            h4 Defenses Breached
+          div.col-xs-12
+          div.col-xs-2
+            h4 Category A
+          div.col-xs-2
+            h4 Category B
+          div.col-xs-2
+            h4 Category C
+          div.col-xs-2
+            h4 Category D
+          div.col-xs-2
+            h4 Category E
+          div.col-xs-2
+        .col-xs-12
+            div.col-xs-2
+              input(type="checkbox", name="autoPortcullis")
+              | Porticullis
+            div.col-xs-2
+              input(type="checkbox", name="autoMoat")
+              | Moat
+            div.col-xs-2
+              input(type="checkbox", name="autoDrawbridge")
+              | Drawbridge
+              br
+            div.col-xs-2
+              input(type="checkbox", name="autoRockWall")
+              | Rock Wall
+            div.col-xs-2
+              input(type="checkbox", name="autoLowBar")
+              | Low Bar
+        .col-xs-12
+            div.col-xs-2
+              input(type="checkbox", name="autoChevalDeFrise")
+              | Cheval de Frise
+            div.col-xs-2
+              input(type="checkbox", name="autoRamparts")
+              | Ramparts
+            div.col-xs-2
+              input(type="checkbox", name="autoSallyPort")
+              | Sally Port
+            div.col-xs-2
+              input(type="checkbox", name="autoRoughTerrain")
+              | Rough Terrain
+        div.col-xs-3
+          br
+          label Shots scored on high goal
+          input.form-control(type="number", placeholder=0, name = "autoHighGoals", value=0)
+        div.col-xs-3
+        div.col-xs-3
+          br
+          label Shots scored on low goal
+          input.form-control(type="number", placeholder = 0, name = "autoLowGoals", value=0)
+          br
+          br
+        legend Teleop
+        .col-xs-12
+          div.col-xs-12
+            h4 Defenses Breached
+          div.col-xs-2
+            h4 Category A
+          div.col-xs-2
+            h4 Category B
+          div.col-xs-2
+            h4 Category C
+          div.col-xs-2
+            h4 Category D
+          div.col-xs-2
+            h4 Category E
+          div.col-xs-2
+        .col-xs-12
+            div.col-xs-2
+              input(type="checkbox", name="portcullis")
+              | Porticullis
+            div.col-xs-2
+              input(type="checkbox", name="moat")
+              | Moat
+            div.col-xs-2
+              input(type="checkbox", name="drawbridge")
+              | Drawbridge
+              br
+            div.col-xs-2
+              input(type="checkbox", name="rockWall")
+              | Rock Wall
+            div.col-xs-2
+              input(type="checkbox", name="lowBar")
+              | Low Bar
+        .col-xs-12
+            div.col-xs-2
+              input(type="checkbox", name="chevalDeFrise")
+              | Cheval de Frise
+            div.col-xs-2
+              input(type="checkbox", name="ramparts")
+              | Ramparts
+            div.col-xs-2
+              input(type="checkbox", name="sallyPort")
+              | Sally Port
+            div.col-xs-2
+              input(type="checkbox", name="roughTerrain")
+              | Rough Terrain
+        .row
+          .col-xs-6.col-xs-offset-4
+            .form-group
+
+            //- offense
 
         form#match_form
           fieldset
-            legend Match Scouting
-            div.row
-              div.col-xs-4
-                .form-group
-                  label Team Number
-                    input.form-control(type="number", placeholder="3061", name="teamNumber", value=0)
-              div.col-xs-4
-                .form-group
-                  label Match Number
-                    input.form-control(type="number", placeholder="1", name="matchNumber", value=0)
-              div.col-xs-4
-                .form-group
-                  label Your name
-                    input.form-control(type="text", placeholder="your name", name="scout_name")
-            div.row
-              div.col-xs-6
-                h3 Autonomous
-                //- .form-group
-                //-   label Starting position
-                //-     input.form-control(type="number", placeholder="use map", name="auto_starting_config", value=0)
-                .form-group
-                  label Number of RC's moved from stage to auto zone
-                    input.form-control(type="number", placeholder="0", name="RC_stage_to_auto", value=0)
-                .form-group
-                  label Number of RC's moved from step
-                    input.form-control(type="number", placeholder="0", name="RC_from_step", value=0)
-                .form-group
-                  label Number of RC's moved from step to auto zone
-                    input.form-control(type='number', placeholder='0', name='RC_step_to_auto', value=0)
-                .form-group
-                  label Number of totes moved to auto zone
-                    input.form-control(type='number', placeholder='0', name='totes_to_auto', value=0)
-                .checkbox
-                  label
-                    input(type='checkbox', name='totes_auto_stacked')
-                    | Were they stacked?
-                //- .checkbox
-                //-   label
-                //-     input(type="checkbox", name="req_others_move_RC")
-                //-     | Required other robots to move RC's out of the way?
-                //- .checkbox
-                //-   label
-                //-     input(type='checkbox', name='req_knock_over_RC')
-                //-     | Required knocking over RC's
-                .checkbox 
-                  label
-                    input(type="checkbox", name="fully_moves_to_auto")
-                    | Moves to auto zone fully?
-              div.col-xs-6
-                h3 Teleop
-                .form-group
-                  label Number of totes collected from feeder station
-                    input.form-control(type="number", name="num_totes_from_feeder", value=0)
-                .form-group
-                  label Number of totes collected from landfill
-                    input.form-control(type="number", name="num_totes_from_landfill", value=0)
-                .form-group
-                  label Number of RC's acquired from step
-                    input.form-control(type="number", name="num_RC_from_step", value=0)
-                //- .form-group
-                //-   label Number of fouls called against
-                //-     input.form-control(type="number", name="num_fouls_called", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="robot_tipped")
-                    | Did the robot tip over?
+            div.col-xs-6
+              legend Offense
+              label Balls brought to courtyard
+                input.form-control(type="number", placeholder=0, name = "ballsToCourtyard", value=0)
+                br
+              label Low goals scored
+                input.form-control(type="number", placeholder=0, name = "lowGoals", value=0)
+                br
+              label High goals scored
+                input.form-control(type="number", placeholder=0, name = "highGoals", value=0)
+                br
+              br
+              input(type="checkbox", name="DidRobotScale")
+              | Did the robot scale the tower?
+              br
+              br
+              input(type="checkbox", name="RobotWobbleOrFall")
+              | Does robot wobble or fall?
+              br
+              br
+              input(type="checkbox", name="matchCounterStrategy")
+              | Do we need to develop a counter strategy?
 
-                //- button.btn.btn-sm.btn-info(type="button", data-toggle="popover",title="Unprocessed vs. Processed",
-                //-   data-content="Unprocessed is the litter you throw onto the opposite alliance that goes past their landfill. Processed is the litter the other team throws into the zone past our landfill that we move into the landfill") Unprocessed vs. Processed
-                
-                //- .form-group
-                //-   label Unprocessed Litter
-                //-     input.form-control(type="number", name="unprocessed_litter", value=0)
-                //- .form-group
-                //-   label Processed Litter
-                //-     input.form-control(type="number", name="processed_litter", value=0)
-            .text-center
-              h3 Stack Information
-            .row
-              .col-xs-2.col-xs-offset-1 
-                h3 Stack 1
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="1_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="1_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="1_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="1_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 2
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="2_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="2_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="2_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="2_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 3
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="3_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="3_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="3_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="3_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 4
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="4_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="4_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="4_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="4_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 5
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="5_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="5_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="5_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="5_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-1
-            br
-            br
-            .row
-              .col-xs-2.col-xs-offset-1
-                h3 Stack 6
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="6_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="6_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="6_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="6_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 7
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="7_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="7_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="7_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="7_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 8
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="8_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="8_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="8_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="8_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 9
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="9_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="9_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="9_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="9_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-2
-                h3 Stack 10
-                .form-group
-                  label How many totes were there at the start?
-                    input.form-control(type="number", name="10_num_existing_totes", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="10_RC_placed")
-                    | Did they place an RC?
-                .form-group
-                  label Number of totes added by your team, to this stack
-                    input.form-control(type="number", name="10_totes_added", value=0)
-                //- .checkbox
-                //-   label 
-                //-     input(type="checkbox", name="10_litter_added")
-                //-     | Litter added to stack?
-              .col-xs-1
-            .row
-              .text-center
-                h3 Tipped Stacks Information
-              .col-xs-4
-                h3 Stack 1
-                .form-group
-                  label Height of Stack (total items)
-                    input.form-control(type="number", name="tip1_stack_height", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="tip1_in_control")
-                    | Was the team holding the stack?
-              .col-xs-4
-                h3 Stack 2
-                .form-group
-                  label Height of Stack (total items)
-                    input.form-control(type="number", name="tip2_stack_height", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="tip2_in_control")
-                    | Was the team holding the stack?
-              .col-xs-4
-                h3 Stack 3
-                .form-group
-                  label Height of Stack (total items)
-                    input.form-control(type="number", name="tip3_stack_height", value=0)
-                .checkbox
-                  label
-                    input(type="checkbox", name="tip3_in_control")
-                    | Was the team holding the stack?
-            .text-center
-              button.btn.btn-success.btn-lg#match_submit Submit
+              //defence
+
+            div.col-xs-6
+              legend Defense
+              label Number of shots prevented
+                input.form-control(type="number", placeholder=0, name = "shotsPrevented", value=0)
+                br
+              label Balls stolen
+                input.form-control(type="number", placeholder=0, name = "ballsStolen", value=0)
+                br
+              label Number of fouls
+                input.form-control(type="number", placeholder=0, name = "fouls", value=0)
+                br
+              br
+              br
+            div.col-xs-12
+              br
+        .row
+          .col-xs-6.col-xs-offset-4
+            .form-group
+
+
+            img
+
+        .text-center
+          br
+          button.btn.btn-success.btn-lg#match_submit Submit
 
     // /container
-    
+
     // Bootstrap core JavaScript
     // ==================================================
     // Placed at the end of the document so the pages load faster
